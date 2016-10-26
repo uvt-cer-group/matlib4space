@@ -1,20 +1,3 @@
-void readValuesIntoArray2(FILE *ifp, double *inputValues, int  *k){
-
-         double valueDouble;
-        char *inputHexValue=(char*)malloc(30*sizeof(char));
-        *k=-1;
-	while(fscanf(ifp,"%s",inputHexValue)!=EOF){
-
-                valueDouble=hex2double2(inputHexValue);
-                (*k)++;
-                inputValues[(*k)]=valueDouble;   
-
-
-
-
-        }
-
-}
 
 void computeTrigFunctions(FILE *of_sin, FILE *of_cos, FILE *of_tan,double *inputValues, int k){
 
@@ -27,20 +10,28 @@ void computeTrigFunctions(FILE *of_sin, FILE *of_cos, FILE *of_tan,double *input
 	clock_t start,end;
 	double time_sin, time_cos, time_tan;
 	
+	mpfr_t x,a;
+	mpfr_init2(x,64);
+	mpfr_init2(a,64);
+
 
 	for(i=0;i<=k;i++){
+		mpfr_set_d(x,inputValues[i],MPFR_RNDD);
 		start=clock();
-		sin_result=sin(inputValues[i]);
+		mpfr_sin(a,x,MPFR_RNDD);
+		sin_result=mpfr_get_d(a,MPFR_RNDD);
 		end=clock();
 		time_sin = compute_time(start,end);
 
 		start=clock();
-		cos_result=cos(inputValues[i]);
+		mpfr_cos(a,x,MPFR_RNDD);
+		cos_result=mpfr_get_d(a,MPFR_RNDD);
 		end=clock();
 		time_cos = compute_time(start,end);
 
 		start=clock();
-		tan_result=tan(inputValues[i]);
+		mpfr_tan(a,x,MPFR_RNDD);
+		tan_result=mpfr_get_d(a,MPFR_RNDD);
 		end=clock();
 		time_tan = compute_time(start,end);
 
@@ -53,13 +44,17 @@ void computeTrigFunctions(FILE *of_sin, FILE *of_cos, FILE *of_tan,double *input
 		printHex(of_tan, inputHexValue, outputHexValue_tan,time_tan);
 		
 	}
+	mpfr_clear(x);
+  	mpfr_clear(a);
+	mpfr_free_cache();
+
 
 }
 
 
-void computeTrigFunctionsReverse(FILE *of_asin, FILE *of_acos, FILE *of_atan, FILE *of_atan2, double *inputValues_asin, double * inputValues_acos, double *inputValues_atan, double *inputValues_atan2_x,double *inputValues_atan2_y, int k, int k_atan2){
+void computeTrigFunctionsReverse(FILE *of_asin, FILE *of_acos, FILE *of_atan, FILE *of_atan2, double *inputValues_asin, double * inputValues_acos, double *inputValues_atan, double *inputValues_atan2_x, double *inputValues_atan2_y, int k, int k_atan, int k_atan2){
 
-        int i,j;
+        int i;
         double asin_result, acos_result, atan_result, atan2_result;
         char *inputHexValue_asin=(char *)malloc(30*sizeof(char));
 	char *inputHexValue_acos=(char *)malloc(30*sizeof(char));
@@ -73,48 +68,70 @@ void computeTrigFunctionsReverse(FILE *of_asin, FILE *of_acos, FILE *of_atan, FI
 	clock_t start,end;
 	double time_asin, time_acos, time_atan, time_atan2;
 
+	mpfr_t x,y,a;
+	mpfr_init2(x,64);
+	mpfr_init2(y,64);
+	mpfr_init2(a,64);
 
        	for(i=0;i<=k;i++){
+			mpfr_set_d(x,inputValues_asin[i],MPFR_RNDD);
 			start=clock();
-                asin_result=asin(inputValues_asin[i]);
+			mpfr_asin(a,x,MPFR_RNDD);
+                asin_result=mpfr_get_d(a,MPFR_RNDD);
 			end=clock();
 			time_asin = compute_time(start,end);
 
+			mpfr_set_d(x,inputValues_acos[i],MPFR_RNDD);
 			start=clock();
-                acos_result=acos(inputValues_acos[i]);
+			mpfr_acos(a,x,MPFR_RNDD);
+                acos_result=mpfr_get_d(a,MPFR_RNDD);
 			end=clock();
 			time_acos = compute_time(start,end);
+			
+						
 
-			start=clock();
-                atan_result=atan(inputValues_atan[i]);
-			end=clock();
-			time_atan = compute_time(start,end);
                 double2hex(inputValues_asin[i], inputHexValue_asin);
 		double2hex(inputValues_acos[i], inputHexValue_acos);
-		double2hex(inputValues_atan[i], inputHexValue_atan);
                 double2hex(asin_result, outputHexValue_asin);
-                double2hex(acos_result, outputHexValue_acos);
-                double2hex(atan_result, outputHexValue_atan);             
+                double2hex(acos_result, outputHexValue_acos);            
                 printHex(of_asin, inputHexValue_asin, outputHexValue_asin,time_asin);
                 printHex(of_acos, inputHexValue_acos, outputHexValue_acos,time_acos);
-                printHex(of_atan, inputHexValue_atan, outputHexValue_atan,time_atan);
-                
+             
 			
         }
 
-	for(i=0;i<=k_atan2;i++)
-		{
-				start=clock();
-                		atan2_result=atan2(inputValues_atan2_x[i], inputValues_atan2_y[i]);
-				end=clock();
-				time_atan2 = compute_time(start,end);
-				double2hex(inputValues_atan2_x[i], inputHexValue_atan2_x);
-				double2hex(inputValues_atan2_y[i], inputHexValue_atan2_y);
-				double2hex(atan2_result, outputHexValue_atan2);             
-                		printHex2(of_atan2, inputHexValue_atan2_x, inputHexValue_atan2_y, outputHexValue_atan2,time_atan2);
-
-			}
-
+	for(i=0;i<=k_atan;i++){
+		mpfr_set_d(x,inputValues_atan[i],MPFR_RNDD);
+			start=clock();
+			mpfr_atan(a,x,MPFR_RNDD);
+                atan_result=mpfr_get_d(a,MPFR_RNDD);
+			end=clock();
+			time_atan = compute_time(start,end);
+		double2hex(inputValues_atan[i], inputHexValue_atan);
+                double2hex(atan_result, outputHexValue_atan); 		
+                printHex(of_atan, inputHexValue_atan, outputHexValue_atan,time_atan);
+   		
+	}	
+	for(i=0;i<=k_atan2;i++){
+		mpfr_set_d(y,inputValues_atan2_y[i],MPFR_RNDD);	
+			mpfr_set_d(x,inputValues_atan2_x[i],MPFR_RNDD);	
+			start=clock();
+			mpfr_atan2(a,x,y,MPFR_RNDD);
+                	atan2_result=mpfr_get_d(a,MPFR_RNDD);
+			end=clock();
+			time_atan2 = compute_time(start,end);
+			double2hex(inputValues_atan2_x[i], inputHexValue_atan2_x);
+			double2hex(inputValues_atan2_y[i], inputHexValue_atan2_y);
+			double2hex(atan2_result, outputHexValue_atan2);             
+                	printHex2(of_atan2, inputHexValue_atan2_x, inputHexValue_atan2_y, outputHexValue_atan2,time_atan2);
+	}
 	
+
+	mpfr_clear(x);
+	mpfr_clear(y);
+  	mpfr_clear(a);
+	mpfr_free_cache();
+
+
 }
 

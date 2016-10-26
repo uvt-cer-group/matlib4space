@@ -1,5 +1,6 @@
 #include<stdio.h>
-#include<openlibm.h>
+#include <gmp.h>
+#include <mpfr.h>
 #include<time.h>
 #include "functions_utils.c"
 #include "trigon_functions_util.c"
@@ -100,21 +101,21 @@ int main(){
      	if1_atan=openFile(inputFileName1_atan,"r");
 	if1_atan2_x=openFile(inputFileName1_atan2_x,"r");
 	if1_atan2_y=openFile(inputFileName1_atan2_y,"r");
-	readValuesIntoArray2(if1_asin, inputValues1_asin, &k1_asin);
-	readValuesIntoArray2(if1_asin, inputValues1_acos, &k1_acos);	
-	readValuesIntoArray2(if1_atan, inputValues1_atan, &k1_atan);
-	readValuesIntoArray2(if1_atan2_x, inputValues1_atan2_x, &k1_atan2);
-	readValuesIntoArray2(if1_atan2_y, inputValues1_atan2_y, &k1_atan2);
+	readValuesIntoArray(if1_asin, inputValues1_asin, &k1_asin);
+	readValuesIntoArray(if1_asin, inputValues1_acos, &k1_acos);	
+	readValuesIntoArray(if1_atan, inputValues1_atan, &k1_atan);
+	readValuesIntoArray(if1_atan2_x, inputValues1_atan2_x, &k1_atan2);
+	readValuesIntoArray(if1_atan2_y, inputValues1_atan2_y, &k1_atan2);
 
 	if2_asin=openFile(inputFileName2_asin_acos,"r");
      	if2_atan=openFile(inputFileName2_atan,"r");
 	if2_atan2_x=openFile(inputFileName2_atan2_x,"r");
 	if2_atan2_y=openFile(inputFileName2_atan2_y,"r");
-	readValuesIntoArray2(if2_asin, inputValues2_asin, &k2_asin);
-     	readValuesIntoArray2(if2_asin, inputValues2_acos, &k2_acos);
-     	readValuesIntoArray2(if2_atan, inputValues2_atan, &k2_atan);
-	readValuesIntoArray2(if2_atan2_x, inputValues2_atan2_x, &k2_atan2);
-	readValuesIntoArray2(if2_atan2_y, inputValues2_atan2_y, &k2_atan2);		
+	readValuesIntoArray(if2_asin, inputValues2_asin, &k2_asin);
+     	readValuesIntoArray(if2_asin, inputValues2_acos, &k2_acos);
+     	readValuesIntoArray(if2_atan, inputValues2_atan, &k2_atan);
+	readValuesIntoArray(if2_atan2_x, inputValues2_atan2_x, &k2_atan2);
+	readValuesIntoArray(if2_atan2_y, inputValues2_atan2_y, &k2_atan2);		
 
 	
 
@@ -130,8 +131,8 @@ int main(){
 
 	
 
-	computeTrigFunctionsReverse(of1_asin,of1_acos, of1_atan, of1_atan2,inputValues1_asin, inputValues1_acos, inputValues1_atan, inputValues1_atan2_x, inputValues1_atan2_y, k1, k1_atan2);
-	computeTrigFunctionsReverse(of2_asin,of2_acos, of2_atan, of2_atan2,inputValues2_asin, inputValues2_acos, inputValues2_atan, inputValues2_atan2_x, inputValues2_atan2_y, k2, k2_atan2);	
+	computeTrigFunctionsReverse(of1_asin,of1_acos, of1_atan, of1_atan2,inputValues1_asin, inputValues1_acos, inputValues1_atan, inputValues1_atan2_x, inputValues1_atan2_y, k1, k1_atan, k1_atan2);
+	computeTrigFunctionsReverse(of2_asin,of2_acos, of2_atan, of2_atan2,inputValues2_asin, inputValues2_acos, inputValues2_atan, inputValues2_atan2_x, inputValues2_atan2_y, k2, k2_atan, k2_atan2);	
 	
 	return 0;
 }
