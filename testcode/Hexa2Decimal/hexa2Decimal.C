@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
         FILE *fstream_out = fopen(argv[ (argc/2) + i ],"w");
 
         if(fstream_in == NULL) {
-                printf("\n file opening failed ");
+                printf("\nFile opening failed:", fstream_in);
                 return -1 ;
         }
 
