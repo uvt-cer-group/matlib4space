@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    261165,       5988]
-NotebookOptionsPosition[    250417,       5634]
-NotebookOutlinePosition[    250907,       5653]
-CellTagsIndexPosition[    250864,       5650]
+NotebookDataLength[    264369,       5999]
+NotebookOptionsPosition[    253933,       5650]
+NotebookOutlinePosition[    254425,       5669]
+CellTagsIndexPosition[    254382,       5666]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -58,33 +58,28 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\inputData\\\\\
-input_trigon\\\\trigon_batch1_dec_out.csv\>\"", "]"}], "//", "Flatten"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"data", " ", "=", " ", 
-   RowBox[{"Replace", "[", 
-    RowBox[{"data", ",", 
-     RowBox[{"{", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input-trigon\\\\trigon_batch1.\
+csv\>\"", "]"}], "//", "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"data", " ", "=", " ", 
+  RowBox[{"Replace", "[", 
+   RowBox[{"data", ",", 
+    RowBox[{"{", 
+     RowBox[{
       RowBox[{
-       RowBox[{
-       "\"\<1.#INF000000000000000000000000000000000000000000000000000000000000\
-0000000000000000e+000\>\"", "\[Rule]", "Infinity"}], ",", 
-       RowBox[{
-       "\"\<-1.#\
-INF000000000000000000000000000000000000000000000000000000000000000000000000000\
-0e+000\>\"", "\[Rule]", 
-        RowBox[{"-", "Infinity"}]}], ",", 
-       RowBox[{
-       "\"\<-1.#\
-IND000000000000000000000000000000000000000000000000000000000000000000000000000\
-0e+000\>\"", "\[Rule]", "Indeterminate"}], ",", 
-       RowBox[{
-       "\"\<-1.#\
-IND000000000000000000000000000000000000000000000000000000000000000000000000000\
-0e+000\>\"", "\[Rule]", "Indeterminate"}]}], "}"}], ",", "1"}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+      "\"\<1.#INF0000000000000000000000000000000000000000000000000000000000000\
+000000000000000e+000\>\"", "\[Rule]", "Infinity"}], ",", 
+      RowBox[{
+      "\"\<-1.#INF000000000000000000000000000000000000000000000000000000000000\
+0000000000000000e+000\>\"", "\[Rule]", 
+       RowBox[{"-", "Infinity"}]}], ",", 
+      RowBox[{
+      "\"\<-1.#IND000000000000000000000000000000000000000000000000000000000000\
+0000000000000000e+000\>\"", "\[Rule]", "Indeterminate"}], ",", 
+      RowBox[{
+      "\"\<-1.#IND000000000000000000000000000000000000000000000000000000000000\
+0000000000000000e+000\>\"", "\[Rule]", "Indeterminate"}]}], "}"}], ",", "1"}],
+    "]"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"lSin", "=", 
    RowBox[{"Map", "[", 
@@ -102,7 +97,8 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"lCos", "=", 
@@ -121,7 +117,8 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"lTan", "=", 
@@ -140,58 +137,82 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\trigon_batch1_sin.csv\>\"", ",", 
-   "outSin"}], "]"}], "\[IndentingNewLine]", 
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\trigon_\
+batch1_sin.csv\>\"", ",", "outSin"}], "]"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\trigon_batch1_cos.csv\>\"", ",", 
-   "outCos"}], "]"}], "\[IndentingNewLine]", 
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\trigon_\
+batch1_cos.csv\>\"", ",", "outCos"}], "]"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\trigon_batch1_tan.csv\>\"", ",", 
-   "outTan"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\trigon_\
+batch1_tan.csv\>\"", ",", "outTan"}], "]"}]}], "Input",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGAQAWIQ7afoNn9v2WvHX68+LAPRZguSflqVv3a8lLQCTD/0
+1:eJxTTMoPSmViYGCQAGIQ7afoNn9v2WvHX68+LAPRZguSflqVv3a8lLQCTD/0
 e/YXRHMr3fgPogtb5z61BtI1Z/1egOg1L6by2ABp9ZkOfCD62hTXaBD9welG
 HIheN31pGoh2OPgwC0T3q23MA9F53vvBtMH89uO2QJrv0Dkwve3h8jMg+sKq
 W+dA9JzF+jdBdNP7R2B6T+b2lyB6koruWxB95+MSYxcgXXR9siWIPrv1sQ+I
 PscU4wuir6QuCgHRM2fWhIForoIbqSDa/ilTBohe0S68F0TfKr4KptfMeHwQ
-bN7Z28dB9EoDU0lXkLsO/pEC0dVPXy6OBdK2zblLQDQA29eqYQ==
+bN7Z28dB9EoDU0lXkLsO/pEC0dVPXy6OBdK2zblLQPQTu2U/H1a8dqzzdfkF
+ot/u3Cv+CEhPWbZOEkTr2VxSA9FtMnLqILogL90ARM8R/GoEogEmrs1q
   "]],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\trigon_batch1_sin.csv\"\>"], \
-"Output",
- CellChangeTimes->{3.6864637719492683`*^9}],
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0.`", ",", "1.5707963267948966`80.19611987703016", ",", 
+   "1.0471975511965976`80.02002861797449", ",", 
+   "0.52359877559829882`80.7189986223105", ",", 
+   "0.78539816339744828`80.89508988136618", ",", 
+   "0.39269908169872414`80.5940598857022", ",", 
+   "0.62831853071795862`80.79817986835812", ",", 
+   "0.31415926535897931`80.49714987269414", ",", 
+   "0.26179938779914941`80.41796862664651", ",", "\[Infinity]", ",", 
+   RowBox[{"-", "\[Infinity]"}], ",", "Indeterminate", ",", "1.`80.*^22", ",",
+    "0.`"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.6864637719492683`*^9, 3.6872563780600457`*^9, {3.6872564597037153`*^9, 
+   3.687256473380498*^9}, 3.6872566933180776`*^9, 3.6872710551042414`*^9, 
+   3.687271091341312*^9, 3.687273831892702*^9}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\trigon_batch1_cos.csv\"\>"], \
-"Output",
- CellChangeTimes->{3.6864637719592686`*^9}],
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\\
+trigon_batch1_sin.csv\"\>"], "Output",
+ CellChangeTimes->{
+  3.6864637719492683`*^9, 3.6872563780600457`*^9, {3.6872564597037153`*^9, 
+   3.687256473380498*^9}, 3.6872566933180776`*^9, 3.6872710551042414`*^9, 
+   3.687271091341312*^9, 3.687273831912702*^9}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\trigon_batch1_tan.csv\"\>"], \
-"Output",
- CellChangeTimes->{3.6864637719692683`*^9}]
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\\
+trigon_batch1_cos.csv\"\>"], "Output",
+ CellChangeTimes->{
+  3.6864637719492683`*^9, 3.6872563780600457`*^9, {3.6872564597037153`*^9, 
+   3.687256473380498*^9}, 3.6872566933180776`*^9, 3.6872710551042414`*^9, 
+   3.687271091341312*^9, 3.687273831912702*^9}],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\\
+trigon_batch1_tan.csv\"\>"], "Output",
+ CellChangeTimes->{
+  3.6864637719492683`*^9, 3.6872563780600457`*^9, {3.6872564597037153`*^9, 
+   3.687256473380498*^9}, 3.6872566933180776`*^9, 3.6872710551042414`*^9, 
+   3.687271091341312*^9, 3.687273831922702*^9}]
 }, Open  ]]
 }, Closed]],
 
 Cell[CellGroupData[{
 
-Cell["trigon_batch2 (for Sin, Cos, Tan)", "Subsection",
+Cell[TextData[StyleBox["trigon_batch2 (for Sin, Cos, Tan)",
+ FontColor->RGBColor[1, 0, 0]]], "Subsection",
  CellChangeTimes->{{3.6823139301237803`*^9, 3.6823139614685726`*^9}, {
    3.683252619472883*^9, 3.6832526203528843`*^9}, 3.6853367175676928`*^9, {
    3.6853578584858437`*^9, 3.685357860386952*^9}, {3.685361826636798*^9, 
@@ -210,10 +231,9 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\inputData\\\\\
-input_trigon\\\\trigon_batch2_dec_out.csv\>\"", "]"}], "//", "Flatten"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input-trigon\\\\trigon_batch2.\
+csv\>\"", "]"}], "//", "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -254,7 +274,8 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"lCos", "=", 
@@ -273,7 +294,8 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"lTan", "=", 
@@ -292,55 +314,57 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\trigon_batch2_sin.csv\>\"", ",", 
-   "outSin"}], "]"}], "\[IndentingNewLine]", 
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\trigon_\
+batch2_sin.csv\>\"", ",", "outSin"}], "]"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\trigon_batch2_cos.csv\>\"", ",", 
-   "outCos"}], "]"}], "\[IndentingNewLine]", 
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\trigon_\
+batch2_cos.csv\>\"", ",", "outCos"}], "]"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\trigon_batch2_tan.csv\>\"", ",", 
-   "outTan"}], "]"}]}], "Input",
- CellChangeTimes->{{3.6861329861915655`*^9, 3.6861330475286837`*^9}, {
-  3.686389707082057*^9, 3.686389709262063*^9}, {3.686389743197129*^9, 
-  3.6863897587541556`*^9}, {3.686391596922539*^9, 3.6863916184625835`*^9}, {
-  3.6863919086846523`*^9, 3.6863919220186954`*^9}, {3.6863925381744184`*^9, 
-  3.686392566758171*^9}, {3.6863926291747656`*^9, 3.68639266305484*^9}, {
-  3.686392693535957*^9, 3.6863926939779577`*^9}, {3.686395452238182*^9, 
-  3.6863954544611883`*^9}, {3.6863954932463026`*^9, 3.686395510833351*^9}, {
-  3.686395593488722*^9, 3.686395599091737*^9}, {3.686395725731657*^9, 
-  3.686395753410714*^9}, {3.6863958033718414`*^9, 3.6863958163938737`*^9}, {
-  3.6864608594717317`*^9, 3.6864609348678956`*^9}, {3.6864613396079855`*^9, 
-  3.6864613603320312`*^9}}],
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\trigon_\
+batch2_tan.csv\>\"", ",", "outTan"}], "]"}]}], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQBWIQ7afoNn9v2WvHX68+LAPRZguSflqVv3a8lLQCTD/0
+e/YXRHMr3fgPogtb5z61BtI1Z/1egOg1L6by2ABp9ZkOfCD62hTXaBD9welG
+HIheN31pGoh2OPgwC0T3q23MA9F53vvBtMH89uO2QJrv0Dkwve3h8jMg+sKq
+W+dA9JzF+jdBdNP7R2B6T+b2lyB6koruWxCt8Cz7M4ieO4vnK4jOlcjfHguk
+zx69fQBEzysp/gyiGRZwfQPRYXe+WjyqeO3YXn7TDkRfuS7gC6IV4g39QPSR
+QPcgEO0o3AWmg54fYnoMpA+UPGIG0VPqPb1BdLmipg+ItirLjATRWSV50SAa
+AIuXtCA=
+  "]],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\trigon_batch2_sin.csv\"\>"], \
-"Output",
- CellChangeTimes->{3.6864637720492687`*^9}],
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\\
+trigon_batch2_sin.csv\"\>"], "Output",
+ CellChangeTimes->{
+  3.6864637720492687`*^9, 3.687256568720951*^9, {3.6872566972623034`*^9, 
+   3.6872567247788773`*^9}, {3.687258137464243*^9, 3.6872581456962557`*^9}, {
+   3.687258829593185*^9, 3.687258844148212*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\trigon_batch2_cos.csv\"\>"], \
-"Output",
- CellChangeTimes->{3.686463772059269*^9}],
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\\
+trigon_batch2_cos.csv\"\>"], "Output",
+ CellChangeTimes->{
+  3.6864637720492687`*^9, 3.687256568720951*^9, {3.6872566972623034`*^9, 
+   3.6872567247788773`*^9}, {3.687258137464243*^9, 3.6872581456962557`*^9}, {
+   3.687258829593185*^9, 3.6872588441582117`*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\trigon_batch2_tan.csv\"\>"], \
-"Output",
- CellChangeTimes->{3.6864637720692687`*^9}]
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\\
+trigon_batch2_tan.csv\"\>"], "Output",
+ CellChangeTimes->{
+  3.6864637720492687`*^9, 3.687256568720951*^9, {3.6872566972623034`*^9, 
+   3.6872567247788773`*^9}, {3.687258137464243*^9, 3.6872581456962557`*^9}, {
+   3.687258829593185*^9, 3.687258844168212*^9}}]
 }, Open  ]]
 }, Closed]],
 
@@ -365,10 +389,9 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\inputData\\\\\
-input_trigon\\\\asin_acos_batch1_dec_out.csv\>\"", "]"}], "//", "Flatten"}]}],
-   ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input-trigon\\\\asin_acos_\
+batch1.csv\>\"", "]"}], "//", "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -418,7 +441,8 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"lArcCos", "=", 
@@ -447,20 +471,19 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\asin_acos_batch1_asin.csv\>\"", 
-   ",", "outArcSin"}], "]"}], "\[IndentingNewLine]", 
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\asin_\
+acos_batch1_asin.csv\>\"", ",", "outArcSin"}], "]"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\asin_acos_batch1_acos.csv\>\"", 
-   ",", "outArcCos"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\asin_\
+acos_batch1_acos.csv\>\"", ",", "outArcCos"}], "]"}]}], "Input",
  CellChangeTimes->{{3.6861329861915655`*^9, 3.6861330475286837`*^9}, {
    3.686389707082057*^9, 3.686389709262063*^9}, {3.686389743197129*^9, 
    3.6863897587541556`*^9}, {3.686391596922539*^9, 3.6863916184625835`*^9}, {
@@ -481,25 +504,30 @@ Mathematica\\\\output_trigon\\\\decimal\\\\asin_acos_batch1_acos.csv\>\"",
    3.6863976491744576`*^9, 3.6863976932237134`*^9}, {3.686461459707409*^9, 
    3.6864615426106195`*^9}, {3.6864615752376823`*^9, 
    3.6864616335558133`*^9}, {3.686461674971896*^9, 3.6864616774379005`*^9}, {
-   3.6864620612363873`*^9, 3.686462140205593*^9}}],
+   3.6864620612363873`*^9, 3.686462140205593*^9}, {3.6872588695117607`*^9, 
+   3.6872588816667852`*^9}, {3.687258923227874*^9, 3.687258970685955*^9}, {
+   3.6872590297540793`*^9, 3.6872590683426523`*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\asin_acos_batch1_asin.csv\"\>"], \
-"Output",
- CellChangeTimes->{3.686463772119269*^9}],
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\asin_\
+acos_batch1_asin.csv\"\>"], "Output",
+ CellChangeTimes->{
+  3.686463772119269*^9, 3.6872589734969597`*^9, {3.687259037356593*^9, 
+   3.6872590689226527`*^9}, 3.687271627842925*^9, 3.6872738381167135`*^9}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\asin_acos_batch1_acos.csv\"\>"], \
-"Output",
- CellChangeTimes->{3.6864637721292686`*^9}]
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\asin_\
+acos_batch1_acos.csv\"\>"], "Output",
+ CellChangeTimes->{
+  3.686463772119269*^9, 3.6872589734969597`*^9, {3.687259037356593*^9, 
+   3.6872590689226527`*^9}, 3.687271627842925*^9, 3.6872738381367135`*^9}]
 }, Open  ]]
 }, Closed]],
 
 Cell[CellGroupData[{
 
-Cell["asin_acos_batch2 (for Arcsin, ArcCos)", "Subsection",
+Cell[TextData[StyleBox["asin_acos_batch2 (for Arcsin, ArcCos)",
+ FontColor->RGBColor[1, 0, 0]]], "Subsection",
  CellChangeTimes->{{3.6823139301237803`*^9, 3.6823139614685726`*^9}, {
    3.683252619472883*^9, 3.6832526203528843`*^9}, 3.6853367175676928`*^9, {
    3.6853578584858437`*^9, 3.685357860386952*^9}, {3.685361826636798*^9, 
@@ -518,10 +546,9 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\inputData\\\\\
-input_trigon\\\\asin_acos_batch2_dec_out.csv\>\"", "]"}], "//", "Flatten"}]}],
-   ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input-trigon\\\\asin_acos_\
+batch2.csv\>\"", "]"}], "//", "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -604,16 +631,14 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\asin_acos_batch2_asin.csv\>\"", 
-   ",", "outArcSin"}], "]"}], "\[IndentingNewLine]", 
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\asin_\
+acos_batch2_asin.csv\>\"", ",", "outArcSin"}], "]"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\asin_acos_batch2_acos.csv\>\"", 
-   ",", "outArcCos"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\asin_\
+acos_batch2_asin.csv\>\"", ",", "outArcCos"}], "]"}]}], "Input",
  CellChangeTimes->{{3.6861329861915655`*^9, 3.6861330475286837`*^9}, {
    3.686389707082057*^9, 3.686389709262063*^9}, {3.686389743197129*^9, 
    3.6863897587541556`*^9}, {3.686391596922539*^9, 3.6863916184625835`*^9}, {
@@ -632,19 +657,23 @@ Mathematica\\\\output_trigon\\\\decimal\\\\asin_acos_batch2_acos.csv\>\"",
    3.686397375057691*^9, 3.686397460817908*^9}, {3.6863975121051087`*^9, 
    3.6863975139011116`*^9}, {3.686397598409336*^9, 3.6863976053293524`*^9}, {
    3.6863976491744576`*^9, 3.6863976932237134`*^9}, {3.6864006165240045`*^9, 
-   3.686400623677021*^9}, {3.686462179479747*^9, 3.6864622133968363`*^9}}],
+   3.686400623677021*^9}, {3.686462179479747*^9, 3.6864622133968363`*^9}, {
+   3.6872590986817083`*^9, 3.6872591341952686`*^9}, 3.687271660805023*^9, 
+   3.6872717567221828`*^9}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\asin_acos_batch2_asin.csv\"\>"], \
-"Output",
- CellChangeTimes->{3.686463772179269*^9}],
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\asin_\
+acos_batch2_asin.csv\"\>"], "Output",
+ CellChangeTimes->{
+  3.686463772179269*^9, 3.6872591361207714`*^9, 3.6872716615230246`*^9, {
+   3.687271751909175*^9, 3.6872717572721834`*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\asin_acos_batch2_acos.csv\"\>"], \
-"Output",
- CellChangeTimes->{3.686463772199269*^9}]
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\asin_\
+acos_batch2_asin.csv\"\>"], "Output",
+ CellChangeTimes->{
+  3.686463772179269*^9, 3.6872591361207714`*^9, 3.6872716615230246`*^9, {
+   3.687271751909175*^9, 3.6872717572821836`*^9}}]
 }, Open  ]]
 }, Closed]],
 
@@ -670,10 +699,9 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\inputData\\\\\
-input_trigon\\\\atan_batch1_dec_out.csv\>\"", "]"}], "//", "Flatten"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input-trigon\\\\atan_batch1.\
+csv\>\"", "]"}], "//", "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -726,14 +754,14 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\atan_batch1.csv\>\"", ",", 
-   "outArcTan"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\atan_\
+batch1.csv\>\"", ",", "outArcTan"}], "]"}]}], "Input",
  CellChangeTimes->{{3.6861329861915655`*^9, 3.6861330475286837`*^9}, {
    3.686389707082057*^9, 3.686389709262063*^9}, {3.686389743197129*^9, 
    3.6863897587541556`*^9}, {3.686391596922539*^9, 3.6863916184625835`*^9}, {
@@ -754,18 +782,23 @@ Mathematica\\\\output_trigon\\\\decimal\\\\atan_batch1.csv\>\"", ",",
    3.6863976491744576`*^9, 3.6863976932237134`*^9}, {3.6863977502628384`*^9, 
    3.6863977776459017`*^9}, {3.686397847755*^9, 3.6863978508250065`*^9}, {
    3.6863981985276566`*^9, 3.6863982958279085`*^9}, {3.686398359085062*^9, 
-   3.686398378787111*^9}, {3.686462245633951*^9, 3.6864622774800262`*^9}}],
+   3.686398378787111*^9}, {3.686462245633951*^9, 3.6864622774800262`*^9}, {
+   3.6872591592748175`*^9, 3.687259178342857*^9}, {3.687259240992538*^9, 
+   3.6872593634388504`*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\atan_batch1.csv\"\>"], "Output",
- CellChangeTimes->{3.686463772239269*^9}]
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\atan_\
+batch1.csv\"\>"], "Output",
+ CellChangeTimes->{
+  3.686463772239269*^9, {3.687259245421045*^9, 3.6872593641013517`*^9}, 
+   3.6872718934580526`*^9, 3.68727384544273*^9}]
 }, Open  ]]
 }, Closed]],
 
 Cell[CellGroupData[{
 
-Cell["atan_batch2 (for ArcTan)", "Subsection",
+Cell[TextData[StyleBox["atan_batch2 (for ArcTan)",
+ FontColor->RGBColor[1, 0, 0]]], "Subsection",
  CellChangeTimes->{{3.6823139301237803`*^9, 3.6823139614685726`*^9}, {
    3.683252619472883*^9, 3.6832526203528843`*^9}, 3.6853367175676928`*^9, {
    3.6853578584858437`*^9, 3.685357860386952*^9}, {3.685361826636798*^9, 
@@ -785,10 +818,9 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\inputData\\\\\
-input_trigon\\\\atan_batch2_dec_out.csv\>\"", "]"}], "//", "Flatten"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input-trigon\\\\atan_batch2.\
+csv\>\"", "]"}], "//", "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -841,14 +873,14 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\atan_batch2.csv\>\"", ",", 
-   "outArcTan"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\atan_\
+batch2.csv\>\"", ",", "outArcTan"}], "]"}]}], "Input",
  CellChangeTimes->{{3.6861329861915655`*^9, 3.6861330475286837`*^9}, {
    3.686389707082057*^9, 3.686389709262063*^9}, {3.686389743197129*^9, 
    3.6863897587541556`*^9}, {3.686391596922539*^9, 3.6863916184625835`*^9}, {
@@ -872,12 +904,15 @@ Mathematica\\\\output_trigon\\\\decimal\\\\atan_batch2.csv\>\"", ",",
    3.686398378787111*^9}, {3.686398427785228*^9, 3.686398434784252*^9}, {
    3.68639848262436*^9, 3.686398502978409*^9}, {3.686399307465842*^9, 
    3.6863993239948688`*^9}, {3.6864624760366497`*^9, 3.6864624764566507`*^9}, 
-   3.6864625196647415`*^9}],
+   3.6864625196647415`*^9, {3.6872593842913847`*^9, 3.68725943684748*^9}, {
+   3.6872720853042164`*^9, 3.6872720982152357`*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_trigon\\\\decimal\\\\atan_batch2.csv\"\>"], "Output",
- CellChangeTimes->{3.686463772312269*^9}]
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\atan_\
+batch2.csv\"\>"], "Output",
+ CellChangeTimes->{
+  3.686463772312269*^9, {3.6872593988724127`*^9, 3.687259439829984*^9}, {
+   3.687272085894217*^9, 3.687272098815237*^9}}]
 }, Open  ]]
 }, Closed]],
 
@@ -937,13 +972,15 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
    RowBox[{
     RowBox[{"i", "=", "1"}], ",", 
     RowBox[{"i", "\[LessEqual]", 
-     RowBox[{"Length", "[", "data", "]"}]}], ",", 
+     RowBox[{
+      RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], ",", 
     RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
     RowBox[{"For", "[", 
      RowBox[{
       RowBox[{"j", "=", "1"}], ",", 
       RowBox[{"j", "\[LessEqual]", 
-       RowBox[{"Length", "[", "data", "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], ",", 
       RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", 
       RowBox[{"lArcTan2", "=", 
        RowBox[{"Append", "[", 
@@ -974,8 +1011,8 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
  RowBox[{"Export", "[", 
   RowBox[{
   "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
-matlib4space-master\\\\inputData\\\\decimals\\\\input-trigon\\\\atan2_batch1_\
-out.csv\>\"", ",", "lArcTan2"}], "]"}]}], "Input",
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\atan2_\
+batch1.csv\>\"", ",", "lArcTan2"}], "]"}]}], "Input",
  CellChangeTimes->{{3.6861329861915655`*^9, 3.6861330475286837`*^9}, {
    3.686389707082057*^9, 3.686389709262063*^9}, {3.686389743197129*^9, 
    3.6863897587541556`*^9}, {3.686391596922539*^9, 3.6863916184625835`*^9}, {
@@ -1010,7 +1047,9 @@ out.csv\>\"", ",", "lArcTan2"}], "]"}]}], "Input",
    3.686462527097767*^9, 3.6864625502748594`*^9}, {3.6864630701113095`*^9, 
    3.686463084384341*^9}, {3.686463473690312*^9, 3.686463557591526*^9}, {
    3.686463596851633*^9, 3.6864636200176973`*^9}, {3.687174554946955*^9, 
-   3.687174565052533*^9}, {3.687174598077422*^9, 3.6871746025986805`*^9}}],
+   3.687174565052533*^9}, {3.687174598077422*^9, 3.6871746025986805`*^9}, {
+   3.6872594907751637`*^9, 3.68725957159632*^9}, {3.6872721315792923`*^9, 
+   3.687272159150338*^9}, {3.6872731098012075`*^9, 3.687273114491218*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -1022,12 +1061,16 @@ Cell[BoxData[
 \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
 ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/indet\\\", \
 ButtonNote -> \\\"ArcTan::indet\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6864637727522697`*^9, 3.6871746109161563`*^9}],
+ CellChangeTimes->{{3.687272153464329*^9, 3.6872721597733393`*^9}, {
+   3.6872731110372105`*^9, 3.6872731344583535`*^9}, 3.687273849752737*^9}],
 
 Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
-\\\\matlib4space-master\\\\inputData\\\\decimals\\\\input-trigon\\\\atan2_\
-batch1_out.csv\"\>"], "Output",
- CellChangeTimes->{3.68646377280227*^9, 3.6871746110241623`*^9}]
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\\
+atan2_batch1.csv\"\>"], "Output",
+ CellChangeTimes->{
+  3.68646377280227*^9, 3.6871746110241623`*^9, {3.687259494797671*^9, 
+   3.6872595724673223`*^9}, {3.687272134888298*^9, 3.6872721597933397`*^9}, {
+   3.68727311106721*^9, 3.6872731344683533`*^9}, 3.6872738497627373`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -1103,7 +1146,8 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
     RowBox[{"i", "=", "1"}], ",", 
     RowBox[{"i", "\[LessEqual]", 
      RowBox[{
-      RowBox[{"Length", "[", "data", "]"}], "/", "2"}]}], ",", 
+      RowBox[{
+       RowBox[{"Length", "[", "data", "]"}], "/", "2"}], "-", "1"}]}], ",", 
     RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
     RowBox[{"lArcTan2", "=", 
      RowBox[{"Append", "[", 
@@ -1144,8 +1188,8 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
  RowBox[{"Export", "[", 
   RowBox[{
   "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
-matlib4space-master\\\\inputData\\\\decimals\\\\input-trigon\\\\atan2_batch2_\
-out.csv\>\"", ",", "lArcTan2"}], "]"}]}], "Input",
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\atan2_\
+batch2.csv\>\"", ",", "lArcTan2"}], "]"}]}], "Input",
  CellChangeTimes->{{3.6861329861915655`*^9, 3.6861330475286837`*^9}, {
    3.686389707082057*^9, 3.686389709262063*^9}, {3.686389743197129*^9, 
    3.6863897587541556`*^9}, {3.686391596922539*^9, 3.6863916184625835`*^9}, {
@@ -1185,7 +1229,9 @@ out.csv\>\"", ",", "lArcTan2"}], "]"}]}], "Input",
    3.686463372346984*^9, 3.686463407516058*^9}, {3.6864636357787385`*^9, 
    3.6864636527337856`*^9}, 3.6864645309213953`*^9, {3.6871746631921463`*^9, 
    3.687174832443827*^9}, {3.6871748845358067`*^9, 3.6871749150745535`*^9}, 
-   3.6871749500575542`*^9}],
+   3.6871749500575542`*^9, {3.6872595867373505`*^9, 3.6872596728470745`*^9}, {
+   3.6872729256407776`*^9, 3.687272953094822*^9}, {3.6872730105129185`*^9, 
+   3.687273035702964*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -1197,27 +1243,18 @@ Cell[BoxData[
 \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
 ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/indet\\\", \
 ButtonNote -> \\\"ArcTan::indet\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.687174915574582*^9, 3.6871749504715776`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"ArcTan", "::", "indet"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Indeterminate expression \[NoBreak]\\!\\(ArcTan[\\(\\(0.`, \
-0.`\\)\\)]\\)\[NoBreak] encountered. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/indet\\\", \
-ButtonNote -> \\\"ArcTan::indet\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.687174915574582*^9, 3.687174950477578*^9}],
+ CellChangeTimes->{{3.687273026133947*^9, 3.687273036332965*^9}, 
+   3.687273849802737*^9}],
 
 Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
-\\\\matlib4space-master\\\\inputData\\\\decimals\\\\input-trigon\\\\atan2_\
-batch2_out.csv\"\>"], "Output",
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output-trigon\\\\\
+atan2_batch2.csv\"\>"], "Output",
  CellChangeTimes->{
   3.68646377288227*^9, 3.686464531376397*^9, {3.6871747770066566`*^9, 
    3.687174832951856*^9}, {3.6871748945693803`*^9, 3.687174915581582*^9}, 
-   3.6871749504815784`*^9}]
+   3.6871749504815784`*^9, {3.6872595945033646`*^9, 3.687259673870076*^9}, {
+   3.687272928601782*^9, 3.6872729536128225`*^9}, {3.68727300444191*^9, 
+   3.687273036342965*^9}, 3.6872738498127375`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -1233,7 +1270,7 @@ Cell[BoxData[
    "replaced", " ", "in", " ", "the", " ", "file", " ", "with", " ", 
    "Indeterminate"}], "*)"}]], "Input"]
 }, Closed]]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -1285,10 +1322,9 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\inputData\\\\\
-input_non-trigon\\\\exp_batch1_dec_out.csv\>\"", "]"}], "//", "Flatten"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_non-trigon\\\\exp_\
+batch1.csv\>\"", "]"}], "//", "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -1329,14 +1365,14 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\exp_batch1.csv\>\"", ",", 
-   "outExp"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\exp_\
+batch1.csv\>\"", ",", "outExp"}], "]"}]}], "Input",
  CellChangeTimes->{{3.6861329861915655`*^9, 3.6861330475286837`*^9}, {
    3.686389707082057*^9, 3.686389709262063*^9}, {3.686389743197129*^9, 
    3.6863897587541556`*^9}, {3.686391596922539*^9, 3.6863916184625835`*^9}, {
@@ -1352,21 +1388,28 @@ Mathematica\\\\output_non-trigon\\\\decimal\\\\exp_batch1.csv\>\"", ",",
    3.686409790868829*^9}, {3.68641044166219*^9, 3.6864104558986464`*^9}, {
    3.6864607033092628`*^9, 3.6864607074222703`*^9}, {3.686468490091979*^9, 
    3.6864686067512493`*^9}, {3.6864687493096433`*^9, 3.686468775191693*^9}, {
-   3.6864688270148387`*^9, 3.6864688308098507`*^9}, 3.6864694253954277`*^9}],
+   3.6864688270148387`*^9, 3.6864688308098507`*^9}, 3.6864694253954277`*^9, {
+   3.687259863816126*^9, 3.6872598674356327`*^9}, 3.6872599175947113`*^9, {
+   3.687259993197757*^9, 3.687260037042824*^9}, {3.687273899943852*^9, 
+   3.687273914594878*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\exp_batch1.csv\"\>"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
+exp_batch1.csv\"\>"], "Output",
  CellChangeTimes->{
   3.6864637719492683`*^9, {3.6864685226020613`*^9, 3.6864685650341597`*^9}, 
    3.686468611139261*^9, 3.6864687888467293`*^9, 3.6864688320448537`*^9, 
-   3.6864694265424304`*^9, 3.6864824375149775`*^9}]
+   3.6864694265424304`*^9, 3.6864824375149775`*^9, 3.6872599438857527`*^9, 
+   3.6872599937377577`*^9, {3.687260023863305*^9, 3.6872600376928244`*^9}, {
+   3.6872739005578527`*^9, 3.68727391553788*^9}, 3.6872744578136225`*^9, 
+   3.687275876169117*^9}]
 }, Open  ]]
 }, Closed]],
 
 Cell[CellGroupData[{
 
-Cell["exp_batch2 (for Exp)", "Subsection",
+Cell[TextData[StyleBox["exp_batch2 (for Exp)",
+ FontColor->RGBColor[1, 0, 0]]], "Subsection",
  CellChangeTimes->{{3.6823139301237803`*^9, 3.6823139614685726`*^9}, {
    3.683252619472883*^9, 3.6832526203528843`*^9}, 3.6853367175676928`*^9, {
    3.6853578584858437`*^9, 3.685357860386952*^9}, {3.685361826636798*^9, 
@@ -1385,10 +1428,9 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\inputData\\\\\
-input_non-trigon\\\\exp_batch2_dec_out.csv\>\"", "]"}], "//", "Flatten"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_non-trigon\\\\exp_\
+batch2.csv\>\"", "]"}], "//", "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -1429,37 +1471,42 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\exp_batch2.csv\>\"", ",", 
-   "outExp"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\exp_\
+batch2.csv\>\"", ",", "outExp"}], "]"}]}], "Input",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGCQAGIQ7afoNn9v2WvHX68+LAPRZguSflqVv3a8lLQCTD/0
-e/YXRHMr3fgPogtb5z61BtI1Z/1egOg1L6by2ABp9ZkOfCD62hTXaBD9welG
-HIheN31pGoh2OPgwC0T3q23MA9F53vvBtMH89uO2QJrv0Dkwve3h8jMg+sKq
-W+dA9JzF+jdBdNP7R2B6T+b2lyB6koruWxB95+MSYxcgXXR9siWIPrv1sQ+I
-PscU4wuir6QuCgHRM2fWhIForoIbqSDa/ilTBohe0S68F0TfKr4KptfMeHwQ
-bN7Z28dB9EoDU0lXkLsO/pEC0dVPXy6OBdK2zblLQHTdR6fCRCBtw3WjHkTP
-fLFyIoiOVHo2BUT3VybMBtE+r26C6elPJj0B0V5fnz0D0QDFLM2d
+1:eJwdzk0ow3EAxvG1A2XaxYlShjiJErWZbMscsCVJyUssEytmVl7yD5F2XIZY
+I7Jh01IOXoqluaywJTEbu8zf1l6SjRy8LP7P7/D0uT19eQp1s5LNYrFymUE5
+r27DMRoXf8cSO7ByU/ElGIuLbxVWYlAeTkFOvu8PaubXQ1WMlFsegfbIcqaQ
+sdgo4kLvkrQdJiS+Lri/st0HRc6gCuqLDobgUMM5sWxD56pm5F54iEfB3Wt4
+s/fogWvmUj+cfXsmng0cR6GhsOQVBpKW8lrGkYdFPnQf0o3Qw+6QwTvlVgs0
+GqlWmDHsU8KaELsfWnVZDviovSfaV2kn+XM/uaCtrCJbii7nbw6cDEXNnYzV
+c4MWOJWUaHoYhRm+aWiM2BZgW354Ceonuk2wMeYnrrwYXmD9ZzgML9UzAXo8
+LhZ4E8QmFYeG/FAbkdLmvsOCyoIPyDNd/cC0hbwUlKULT2KMvWbqFP4DhB/7
+kg==
   "]],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\exp_batch2.csv\"\>"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
+exp_batch2.csv\"\>"], "Output",
  CellChangeTimes->{
   3.6864637719492683`*^9, {3.6864685226020613`*^9, 3.6864685650341597`*^9}, 
    3.686468611139261*^9, 3.6864687888467293`*^9, 3.6864688320448537`*^9, 
-   3.686469432100445*^9, 3.6864824375549774`*^9}]
+   3.686469432100445*^9, 3.6864824375549774`*^9, 3.687259946048256*^9, 
+   3.6872600576203594`*^9, {3.68726012847919*^9, 3.687260137597704*^9}, {
+   3.6872739254718976`*^9, 3.6872739485079465`*^9}}]
 }, Open  ]]
 }, Closed]],
 
 Cell[CellGroupData[{
 
-Cell["exp_batch3 (for Exp)", "Subsection",
+Cell[TextData[StyleBox["exp_batch3 (for Exp)",
+ FontColor->RGBColor[1, 0, 0]]], "Subsection",
  CellChangeTimes->{{3.6823139301237803`*^9, 3.6823139614685726`*^9}, {
    3.683252619472883*^9, 3.6832526203528843`*^9}, 3.6853367175676928`*^9, {
    3.6853578584858437`*^9, 3.685357860386952*^9}, {3.685361826636798*^9, 
@@ -1479,10 +1526,9 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\inputData\\\\\
-input_non-trigon\\\\exp_batch3_dec_out.csv\>\"", "]"}], "//", "Flatten"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_non-trigon\\\\exp_\
+batch3.csv\>\"", "]"}], "//", "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -1523,32 +1569,35 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\exp_batch3.csv\>\"", ",", 
-   "outExp"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\exp_\
+batch3.csv\>\"", ",", "outExp"}], "]"}]}], "Input",
  CellChangeTimes->CompressedData["
-1:eJwdzk8og3EAxvG142gXpymHLXEhK1HY2JY5MDtIyt94a0IZo0gWRdpxmWne
-0GTDpiUOuFiayy62JH/ejctse9ufxnZwIOL3/A5Pn9vTV8pMdRmEAoFAQgb1
-0janfy6r/s7kD2H9HvPVOJ9V3zMeakzP/8IiGfcHTWu7ySaiOaRPQV9qs1hB
-rGRVYvhk1/bDvIYbgieOg1GoCsQmoLXizAiNHddUudMSVBLFN2HqRezoFt4d
-R8Nwx1UTgSsfb9Sr8cs0tJVX5+BrwV3bSpx53miAofO4DoaFA53wwbDfDVnW
-3ANF05wBtiSFY9BjKfHD6Owj1bcVD9C/0EsQeuV1Ei26Aj+lcDGZdg0SlauT
-brhU0JhGiAoRtwzZlHcd9sp4O7QuDG9DXSZCdSRsCdj+yfOwqsyeg6d9ze/w
-H+Ib1aY=
+1:eJwdzk0ow3EAxvG1uLB2mRRFbYkLEVHYsGWSlyWkvMYyIW+jzFsUaceFiYXI
+5rURB1ws5jJhS/Iyo9X8tzVbXnZQyPB7/oenz+3py5V2lsqYDAYjmgxKuHmL
+hl6f8Nv7vgrTlqRfGQqf8Eq6TuuQuAMwlGf9g/LxBVcmccgs8UC9Z5rFJ8Zp
+ctjwVi2uhu8iax3cnllpgjlGRytUxe52wI7CI9qkRaVJQGSfWGj3HWsX8HLT
+ZoHz2sR7OPr2RHvYcvAMJ2MSXuCjX5eSS+y+m0qH5j2qCFqYNcXwWrZcDjWa
+oQoY0mWVwWwXsxmuKzkGaOu5odXPUkb6z/xgghtJqRFidBl/IuGg61lbSxSM
+tevgsF8kbyDyQ6wjUOPZmICVPLcaqvrr52CR9552xjnphAUfbjeMj1K/wJ2q
+rFfYuMW2U32km6OgtQUoCirCk53w0y79hSXsY4aTeNt8FgRTuWXBsC2Mc+ol
+svIHzuE/KBsCjA==
   "]],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\exp_batch3.csv\"\>"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
+exp_batch3.csv\"\>"], "Output",
  CellChangeTimes->{
   3.6864637719492683`*^9, {3.6864685226020613`*^9, 3.6864685650341597`*^9}, 
    3.686468611139261*^9, 3.6864687888467293`*^9, 3.6864688320448537`*^9, 
-   3.686469432100445*^9, 3.686469491001574*^9, 3.686482437619978*^9}]
+   3.686469432100445*^9, 3.686469491001574*^9, 3.686482437619978*^9, {
+   3.687259939237745*^9, 3.6872599477032585`*^9}, 3.6872601668842483`*^9, 
+   3.6872602030378036`*^9, {3.6872740491162434`*^9, 3.6872740767172995`*^9}}]
 }, Open  ]]
 }, Closed]],
 
@@ -1583,10 +1632,9 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\inputData\\\\\
-input_non-trigon\\\\fabs_batch_dec_out.csv\>\"", "]"}], "//", "Flatten"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_non-trigon\\\\\\\\fabs_\
+batch.csv\>\"", "]"}], "//", "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -1627,23 +1675,26 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\fabs_batch.csv\>\"", ",", 
-   "outAbs"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\fabs_\
+batch.csv\>\"", ",", "outAbs"}], "]"}]}], "Input",
  CellChangeTimes->{{3.686469847535265*^9, 3.686469878088443*^9}, {
    3.6864700119352384`*^9, 3.686470019595252*^9}, 3.686470072405387*^9, 
-   3.6864701296813164`*^9}],
+   3.6864701296813164`*^9, {3.687260277689423*^9, 3.6872603221699944`*^9}, {
+   3.6872742224013433`*^9, 3.6872742297693553`*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\fabs_batch.csv\"\>"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
+fabs_batch.csv\"\>"], "Output",
  CellChangeTimes->{{3.686470012695239*^9, 3.6864700202182546`*^9}, 
-   3.686470073158389*^9, 3.6864701604605403`*^9, 3.6864824376599784`*^9}]
+   3.686470073158389*^9, 3.6864701604605403`*^9, 3.6864824376599784`*^9, {
+   3.687260305794466*^9, 3.687260323242496*^9}, {3.6872742265883493`*^9, 
+   3.6872742303353567`*^9}, 3.6872744654666376`*^9, 3.687275883004133*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -1680,10 +1731,9 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\inputData\\\\\
-input_non-trigon\\\\fabs_batch_dec_out.csv\>\"", "]"}], "//", "Flatten"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_non-trigon\\\\fmin_fmax_\
+batch.csv\>\"", "]"}], "//", "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -1715,33 +1765,34 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
    RowBox[{
     RowBox[{"i", "=", "1"}], ",", " ", 
     RowBox[{"i", "\[LessEqual]", " ", 
-     RowBox[{"Length", "[", "data", "]"}]}], ",", " ", 
-    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
-    RowBox[{"For", " ", "[", 
      RowBox[{
-      RowBox[{"j", "=", "1"}], ",", " ", 
-      RowBox[{"j", "\[LessEqual]", " ", 
-       RowBox[{"Length", "[", "data", "]"}]}], ",", " ", 
-      RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", 
-      RowBox[{"lMin", "=", 
-       RowBox[{"Append", "[", 
-        RowBox[{"lMin", ",", " ", 
-         RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Length", "[", "data", "]"}], "/", "2"}], "-", "1"}]}], ",", 
+    " ", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"lMin", "=", 
+     RowBox[{"Append", "[", 
+      RowBox[{"lMin", ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+         "data", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], ",", 
+         " ", 
+         RowBox[{"data", "\[LeftDoubleBracket]", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Length", "[", "data", "]"}], "/", "2"}], "+", "i"}], 
+          "\[RightDoubleBracket]"}], ",", " ", 
+         RowBox[{"Min", "[", 
           RowBox[{
            RowBox[{
            "data", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
            ",", " ", 
-           RowBox[{
-           "data", "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], 
-           ",", " ", 
-           RowBox[{"Min", "[", 
+           RowBox[{"data", "\[LeftDoubleBracket]", 
             RowBox[{
              RowBox[{
-             "data", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
-             ",", " ", 
-             RowBox[{
-             "data", "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}]}],
-             "]"}]}], "}"}]}], "]"}]}]}], "]"}]}], "]"}], 
+              RowBox[{"Length", "[", "data", "]"}], "/", "2"}], "+", "i"}], 
+            "\[RightDoubleBracket]"}]}], "]"}]}], "}"}]}], "]"}]}]}], "]"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"lMax", "=", 
@@ -1751,67 +1802,78 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
    RowBox[{
     RowBox[{"i", "=", "1"}], ",", " ", 
     RowBox[{"i", "\[LessEqual]", " ", 
-     RowBox[{"Length", "[", "data", "]"}]}], ",", " ", 
-    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
-    RowBox[{"For", " ", "[", 
      RowBox[{
-      RowBox[{"j", "=", "1"}], ",", " ", 
-      RowBox[{"j", "\[LessEqual]", " ", 
-       RowBox[{"Length", "[", "data", "]"}]}], ",", " ", 
-      RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", 
-      RowBox[{"lMax", "=", 
-       RowBox[{"Append", "[", 
-        RowBox[{"lMax", ",", " ", 
-         RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Length", "[", "data", "]"}], "/", "2"}], "-", "1"}]}], ",", 
+    " ", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"lMax", "=", 
+     RowBox[{"Append", "[", 
+      RowBox[{"lMax", ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+         "data", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], ",", 
+         " ", 
+         RowBox[{"data", "\[LeftDoubleBracket]", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Length", "[", "data", "]"}], "/", "2"}], "+", "i"}], 
+          "\[RightDoubleBracket]"}], ",", " ", 
+         RowBox[{"Min", "[", 
           RowBox[{
            RowBox[{
            "data", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
            ",", " ", 
-           RowBox[{
-           "data", "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], 
-           ",", " ", 
-           RowBox[{"Max", "[", 
+           RowBox[{"data", "\[LeftDoubleBracket]", 
             RowBox[{
              RowBox[{
-             "data", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
-             ",", " ", 
-             RowBox[{
-             "data", "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}]}],
-             "]"}]}], "}"}]}], "]"}]}]}], "]"}]}], "]"}], 
+              RowBox[{"Length", "[", "data", "]"}], "/", "2"}], "+", "i"}], 
+            "\[RightDoubleBracket]"}]}], "]"}]}], "}"}]}], "]"}]}]}], "]"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\fmin_fmax__batch_min.csv\>\"", 
-   ",", "lMin"}], "]"}], "\[IndentingNewLine]", 
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\fmin_\
+fmax_batch_min.csv\>\"", ",", "lMin"}], "]"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\fmin_fmax__batch_max.csv\>\"", 
-   ",", "lMax"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\fmin_\
+fmax_batch_max.csv\>\"", ",", "lMax"}], "]"}]}], "Input",
  CellChangeTimes->{{3.686469847535265*^9, 3.686469878088443*^9}, {
    3.6864700119352384`*^9, 3.686470019595252*^9}, 3.686470072405387*^9, 
    3.6864701296813164`*^9, {3.686470401734571*^9, 3.686470597958923*^9}, {
    3.6864706514951425`*^9, 3.6864707605853662`*^9}, {3.68647080663649*^9, 
-   3.686470887918691*^9}}],
+   3.686470887918691*^9}, {3.6872604043757925`*^9, 3.687260544579514*^9}, {
+   3.6872605861208906`*^9, 3.687260696483075*^9}, {3.687260778740351*^9, 
+   3.6872608222819185`*^9}, {3.687260853462968*^9, 3.687260891767026*^9}, {
+   3.6872609493726163`*^9, 3.6872610581134424`*^9}, {3.687274500592716*^9, 
+   3.6872746198599567`*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\fmin_fmax__batch_min.csv\"\>"],\
- "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
+fmin_fmax_batch_min.csv\"\>"], "Output",
  CellChangeTimes->{{3.686470752717355*^9, 3.6864707611863675`*^9}, {
    3.6864708366835556`*^9, 3.686470854481593*^9}, 3.6864708886216927`*^9, 
-   3.6864824377124786`*^9}],
+   3.6864824377124786`*^9, {3.6872605283559895`*^9, 3.687260545366016*^9}, {
+   3.6872605865808916`*^9, 3.6872606025704203`*^9}, 3.687260697013076*^9, {
+   3.6872607795653534`*^9, 3.687260789795868*^9}, {3.687261019028225*^9, 
+   3.687261061101947*^9}, 3.687274429030577*^9, 3.687274468343642*^9, {
+   3.687274501110718*^9, 3.6872745789908485`*^9}, {3.6872746150499496`*^9, 
+   3.687274621689959*^9}, 3.6872758858831387`*^9}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\fmin_fmax__batch_max.csv\"\>"],\
- "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
+fmin_fmax_batch_max.csv\"\>"], "Output",
  CellChangeTimes->{{3.686470752717355*^9, 3.6864707611863675`*^9}, {
    3.6864708366835556`*^9, 3.686470854481593*^9}, 3.6864708886216927`*^9, 
-   3.686482437732479*^9}]
+   3.6864824377124786`*^9, {3.6872605283559895`*^9, 3.687260545366016*^9}, {
+   3.6872605865808916`*^9, 3.6872606025704203`*^9}, 3.687260697013076*^9, {
+   3.6872607795653534`*^9, 3.687260789795868*^9}, {3.687261019028225*^9, 
+   3.687261061101947*^9}, 3.687274429030577*^9, 3.687274468343642*^9, {
+   3.687274501110718*^9, 3.6872745789908485`*^9}, {3.6872746150499496`*^9, 
+   3.687274621689959*^9}, 3.687275885903139*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -1883,46 +1945,50 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
 0e+000\>\"", "\[Rule]", "Indeterminate"}]}], "}"}], ",", "1"}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"lMod", "=", 
-   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{"For", " ", "[", 
   RowBox[{
-   RowBox[{"i", "=", "1"}], ",", " ", 
-   RowBox[{"i", "\[LessEqual]", " ", 
-    RowBox[{
-     RowBox[{
-      RowBox[{"Length", "[", "data", "]"}], "/", "2"}], "-", "1"}]}], ",", 
-   " ", 
-   RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
    RowBox[{"lMod", "=", 
-    RowBox[{"Append", "[", 
-     RowBox[{"lMod", ",", " ", 
-      RowBox[{"{", 
-       RowBox[{
+    RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"fmod", "[", 
+    RowBox[{"y", ",", "x"}], "]"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", " ", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "1"}], ",", " ", 
+    RowBox[{"i", "\[LessEqual]", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Length", "[", "data", "]"}], "/", "2"}], "-", "1"}]}], ",", 
+    " ", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"lMod", "=", 
+     RowBox[{"Append", "[", 
+      RowBox[{"lMod", ",", " ", 
+       RowBox[{"{", 
         RowBox[{
-        "data", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], ",", 
-        " ", 
-        RowBox[{"data", "\[LeftDoubleBracket]", 
          RowBox[{
+         "data", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], ",", 
+         " ", 
+         RowBox[{"data", "\[LeftDoubleBracket]", 
           RowBox[{
-           RowBox[{"Length", "[", "data", "]"}], "/", "2"}], "+", "i"}], 
-         "\[RightDoubleBracket]"}], ",", " ", 
-        RowBox[{"Mod", "[", 
-         RowBox[{
-          RowBox[{
-          "data", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], ",",
-           " ", 
-          RowBox[{"data", "\[LeftDoubleBracket]", 
            RowBox[{
+            RowBox[{"Length", "[", "data", "]"}], "/", "2"}], "+", "i"}], 
+          "\[RightDoubleBracket]"}], ",", " ", 
+         RowBox[{"Mod", "[", 
+          RowBox[{
+           RowBox[{"data", "\[LeftDoubleBracket]", 
             RowBox[{
-             RowBox[{"Length", "[", "data", "]"}], "/", "2"}], "+", "i"}], 
-           "\[RightDoubleBracket]"}]}], "]"}]}], "}"}]}], "]"}]}]}], 
-  "]"}], "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"Length", "[", "data", "]"}], "/", "2"}], "+", "i"}], 
+            "\[RightDoubleBracket]"}], ",", 
+           RowBox[{
+           "data", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}]}], 
+          "]"}]}], "}"}]}], "]"}]}]}], "]"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-non-trigon\\\\decimal\\\\fmod_batch.csv\>\"", ",", "lMod"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\fmod_\
+batch.csv\>\"", ",", "lMod"}], "]"}]}], "Input",
  CellChangeTimes->{{3.686469847535265*^9, 3.686469878088443*^9}, {
    3.6864700119352384`*^9, 3.686470019595252*^9}, 3.686470072405387*^9, 
    3.6864701296813164`*^9, {3.686470401734571*^9, 3.686470597958923*^9}, {
@@ -1931,32 +1997,10 @@ non-trigon\\\\decimal\\\\fmod_batch.csv\>\"", ",", "lMod"}], "]"}]}], "Input",
    3.686471165000735*^9, {3.6870022793761215`*^9, 3.687002311501214*^9}, {
    3.6870024566404305`*^9, 3.6870024677164583`*^9}, {3.687002578864954*^9, 
    3.6870026997132497`*^9}, {3.6870027883550444`*^9, 
-   3.6870028647932973`*^9}, {3.687002921024455*^9, 3.687002923231465*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Infinity", "::", "indet"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Indeterminate expression \[NoBreak]\\!\\(0\\\\ \[Infinity]\
-\\)\[NoBreak] encountered. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/indet\\\", ButtonNote -> \
-\\\"Infinity::indet\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.687002865395298*^9, 3.6870029250254736`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Infinity", "::", "indet"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Indeterminate expression \
-\[NoBreak]\\!\\(\\(\\(-\[Infinity]\\)\\) - \\(\\(-\[Infinity]\\)\\)\\)\
-\[NoBreak] encountered. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/indet\\\", ButtonNote -> \
-\\\"Infinity::indet\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.687002865395298*^9, 3.687002925035474*^9}],
+   3.6870028647932973`*^9}, {3.687002921024455*^9, 3.687002923231465*^9}, {
+   3.687261105888018*^9, 3.687261127098051*^9}, {3.687261160267474*^9, 
+   3.6872612059615507`*^9}, {3.6872747181591167`*^9, 
+   3.6872747345131435`*^9}, {3.6872758313580055`*^9, 3.687275852715049*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -1968,7 +2012,37 @@ Cell[BoxData[
 \\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/indet\\\", ButtonNote -> \
 \\\"Infinity::indet\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.687002865395298*^9, 3.687002925035474*^9}],
+ CellChangeTimes->{{3.687261171691493*^9, 3.6872611851190124`*^9}, 
+   3.6872612159900675`*^9, 3.687274686526064*^9, {3.6872747187591176`*^9, 
+   3.687274736300146*^9}, 3.6872758893551445`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Infinity", "::", "indet"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Indeterminate expression \[NoBreak]\\!\\(0\\\\ \\(\\((\\(-\
+\[Infinity]\\))\\)\\)\\)\[NoBreak] encountered. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/indet\\\", ButtonNote -> \
+\\\"Infinity::indet\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.687261171691493*^9, 3.6872611851190124`*^9}, 
+   3.6872612159900675`*^9, 3.687274686526064*^9, {3.6872747187591176`*^9, 
+   3.687274736300146*^9}, 3.6872758893551445`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Infinity", "::", "indet"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Indeterminate expression \[NoBreak]\\!\\(0\\\\ \[Infinity]\
+\\)\[NoBreak] encountered. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/indet\\\", ButtonNote -> \
+\\\"Infinity::indet\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.687261171691493*^9, 3.6872611851190124`*^9}, 
+   3.6872612159900675`*^9, 3.687274686526064*^9, {3.6872747187591176`*^9, 
+   3.687274736300146*^9}, 3.6872758893551445`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -1981,7 +2055,9 @@ calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
 ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
 \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.687002865395298*^9, 3.687002925035474*^9}],
+ CellChangeTimes->{{3.687261171691493*^9, 3.6872611851190124`*^9}, 
+   3.6872612159900675`*^9, 3.687274686526064*^9, {3.6872747187591176`*^9, 
+   3.687274736300146*^9}, 3.6872758893551445`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -1993,14 +2069,19 @@ Cell[BoxData[
 \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
 ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/indet\\\", \
 ButtonNote -> \\\"Mod::indet\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.687002865395298*^9, 3.6870029250454736`*^9}],
+ CellChangeTimes->{{3.687261171691493*^9, 3.6872611851190124`*^9}, 
+   3.6872612159900675`*^9, 3.687274686526064*^9, {3.6872747187591176`*^9, 
+   3.687274736300146*^9}, 3.6872758893551445`*^9}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-non-trigon\\\\decimal\\\\fmod_batch.csv\"\>"], "Output",
- CellChangeTimes->{3.6870028654172983`*^9, 3.6870029250454736`*^9}]
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
+fmod_batch.csv\"\>"], "Output",
+ CellChangeTimes->{
+  3.6870028654172983`*^9, 3.6870029250454736`*^9, {3.6872611633199797`*^9, 
+   3.687261185129012*^9}, 3.687261216000067*^9, 3.687274686576064*^9, {
+   3.6872747187691174`*^9, 3.687274736320146*^9}, 3.6872758893651447`*^9}]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 
 Cell[TextData[{
  "hypot_batch_dec_out. ",
@@ -2053,10 +2134,9 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\inputData\\\\\
-input_non-trigon\\\\log_batch1_dec_out.csv\>\"", "]"}], "//", "Flatten"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_non-trigon\\\\log_\
+batch1.csv\>\"", "]"}], "//", "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -2097,14 +2177,14 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\log_batch1.csv\>\"", ",", 
-   "outLog"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\log_\
+batch1.csv\>\"", ",", "outLog"}], "]"}]}], "Input",
  CellChangeTimes->{{3.686469847535265*^9, 3.686469878088443*^9}, {
    3.6864700119352384`*^9, 3.686470019595252*^9}, 3.686470072405387*^9, 
    3.6864701296813164`*^9, {3.686470401734571*^9, 3.686470597958923*^9}, {
@@ -2112,22 +2192,26 @@ Mathematica\\\\output_non-trigon\\\\decimal\\\\log_batch1.csv\>\"", ",",
    3.686470887918691*^9}, {3.6864710440028534`*^9, 3.686471125603491*^9}, 
    3.686471165000735*^9, 3.6864713537010107`*^9, {3.6864777520246015`*^9, 
    3.686477801236695*^9}, {3.6864779447760715`*^9, 3.686477966146618*^9}, {
-   3.686478007112713*^9, 3.686478067713846*^9}}],
+   3.686478007112713*^9, 3.686478067713846*^9}, {3.6872612369151936`*^9, 
+   3.687261282084764*^9}, {3.687274805993512*^9, 3.687274813980524*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\log_batch1.csv\"\>"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
+log_batch1.csv\"\>"], "Output",
  CellChangeTimes->{{3.686470752717355*^9, 3.6864707611863675`*^9}, {
    3.6864708366835556`*^9, 3.686470854481593*^9}, 3.6864708886216927`*^9, 
    3.686471099065978*^9, {3.686471147785756*^9, 3.6864711670308495`*^9}, {
    3.6864777526646023`*^9, 3.6864777645606265`*^9}, {3.686477947281579*^9, 
-   3.6864779674036245`*^9}, 3.6864780687378473`*^9, 3.6864824379189816`*^9}]
+   3.6864779674036245`*^9}, 3.6864780687378473`*^9, 3.6864824379189816`*^9, {
+   3.6872612382226963`*^9, 3.6872612525092196`*^9}, 3.6872612829597654`*^9, {
+   3.6872748065225134`*^9, 3.6872748144085255`*^9}, 3.6872758948591557`*^9}]
 }, Open  ]]
 }, Closed]],
 
 Cell[CellGroupData[{
 
-Cell["log_batch2 (for Ln)", "Subsection",
+Cell[TextData[StyleBox["log_batch2 (for Ln)",
+ FontColor->RGBColor[1, 0, 0]]], "Subsection",
  CellChangeTimes->{{3.6823139301237803`*^9, 3.6823139614685726`*^9}, {
    3.683252619472883*^9, 3.6832526203528843`*^9}, 3.6853367175676928`*^9, {
    3.6853578584858437`*^9, 3.685357860386952*^9}, {3.685361826636798*^9, 
@@ -2153,10 +2237,9 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\inputData\\\\\
-input_non-trigon\\\\log_batch2_dec_out.csv\>\"", "]"}], "//", "Flatten"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_non-trigon\\\\log_\
+batch2.csv\>\"", "]"}], "//", "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -2197,14 +2280,14 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\log_batch2.csv\>\"", ",", 
-   "outLog"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\log_\
+batch2.csv\>\"", ",", "outLog"}], "]"}]}], "Input",
  CellChangeTimes->{{3.686469847535265*^9, 3.686469878088443*^9}, {
    3.6864700119352384`*^9, 3.686470019595252*^9}, 3.686470072405387*^9, 
    3.6864701296813164`*^9, {3.686470401734571*^9, 3.686470597958923*^9}, {
@@ -2213,23 +2296,24 @@ Mathematica\\\\output_non-trigon\\\\decimal\\\\log_batch2.csv\>\"", ",",
    3.686471165000735*^9, 3.6864713537010107`*^9, {3.6864777520246015`*^9, 
    3.686477801236695*^9}, {3.6864779447760715`*^9, 3.686477966146618*^9}, {
    3.686478007112713*^9, 3.686478067713846*^9}, {3.6864781442130175`*^9, 
-   3.686478170930088*^9}}],
+   3.686478170930088*^9}, {3.687261315886697*^9, 3.6872613438273077`*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\log_batch2.csv\"\>"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
+log_batch2.csv\"\>"], "Output",
  CellChangeTimes->{{3.686470752717355*^9, 3.6864707611863675`*^9}, {
    3.6864708366835556`*^9, 3.686470854481593*^9}, 3.6864708886216927`*^9, 
    3.686471099065978*^9, {3.686471147785756*^9, 3.6864711670308495`*^9}, {
    3.6864777526646023`*^9, 3.6864777645606265`*^9}, {3.686477947281579*^9, 
    3.6864779674036245`*^9}, 3.6864780687378473`*^9, 3.6864781823091125`*^9, 
-   3.686482437959982*^9}]
+   3.686482437959982*^9, {3.687261329349723*^9, 3.687261346427812*^9}}]
 }, Open  ]]
 }, Closed]],
 
 Cell[CellGroupData[{
 
-Cell["log_batch3 (for Ln)", "Subsection",
+Cell[TextData[StyleBox["log_batch3 (for Ln)",
+ FontColor->RGBColor[1, 0, 0]]], "Subsection",
  CellChangeTimes->{{3.6823139301237803`*^9, 3.6823139614685726`*^9}, {
    3.683252619472883*^9, 3.6832526203528843`*^9}, 3.6853367175676928`*^9, {
    3.6853578584858437`*^9, 3.685357860386952*^9}, {3.685361826636798*^9, 
@@ -2255,10 +2339,9 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\inputData\\\\\
-input_non-trigon\\\\log_batch3_dec_out.csv\>\"", "]"}], "//", "Flatten"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_non-trigon\\\\log_\
+batch3.csv\>\"", "]"}], "//", "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -2299,14 +2382,14 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\log_batch3.csv\>\"", ",", 
-   "outLog"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\log_\
+batch3.csv\>\"", ",", "outLog"}], "]"}]}], "Input",
  CellChangeTimes->{{3.686469847535265*^9, 3.686469878088443*^9}, {
    3.6864700119352384`*^9, 3.686470019595252*^9}, 3.686470072405387*^9, 
    3.6864701296813164`*^9, {3.686470401734571*^9, 3.686470597958923*^9}, {
@@ -2315,17 +2398,19 @@ Mathematica\\\\output_non-trigon\\\\decimal\\\\log_batch3.csv\>\"", ",",
    3.686471165000735*^9, 3.6864713537010107`*^9, {3.6864777520246015`*^9, 
    3.686477801236695*^9}, {3.6864779447760715`*^9, 3.686477966146618*^9}, {
    3.686478007112713*^9, 3.686478067713846*^9}, {3.6864781442130175`*^9, 
-   3.686478170930088*^9}, {3.6864784135505285`*^9, 3.686478428266554*^9}}],
+   3.686478170930088*^9}, {3.6864784135505285`*^9, 3.686478428266554*^9}, {
+   3.6872613560398273`*^9, 3.6872613863029375`*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\log_batch3.csv\"\>"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
+log_batch3.csv\"\>"], "Output",
  CellChangeTimes->{{3.686470752717355*^9, 3.6864707611863675`*^9}, {
    3.6864708366835556`*^9, 3.686470854481593*^9}, 3.6864708886216927`*^9, 
    3.686471099065978*^9, {3.686471147785756*^9, 3.6864711670308495`*^9}, {
    3.6864777526646023`*^9, 3.6864777645606265`*^9}, {3.686477947281579*^9, 
    3.6864779674036245`*^9}, 3.6864780687378473`*^9, 3.6864781823091125`*^9, 
-   3.686478431314562*^9, 3.6864824380199823`*^9}]
+   3.686478431314562*^9, 3.6864824380199823`*^9, {3.687261373166852*^9, 
+   3.6872613876294403`*^9}}]
 }, Open  ]]
 }, Closed]],
 
@@ -2360,13 +2445,14 @@ Cell[TextData[{
 Cell[CellGroupData[{
 
 Cell[BoxData[{
- RowBox[{"data", "=", 
-  RowBox[{
+ RowBox[{
+  RowBox[{"data", "=", 
    RowBox[{
-   "Import", "[", 
-    "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+    RowBox[{
+    "Import", "[", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
 matlib4space-master\\\\inputData\\\\decimals\\\\input_non-trigon\\\\log_\
-batch1.csv\>\"", "]"}], "//", "Flatten"}]}], "\[IndentingNewLine]", 
+batch1.csv\>\"", "]"}], "//", "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -2398,7 +2484,8 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
    RowBox[{
     RowBox[{"i", "=", "1"}], ",", 
     RowBox[{"i", "\[LessEqual]", 
-     RowBox[{"Length", "[", "data", "]"}]}], ",", 
+     RowBox[{
+      RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], ",", 
     RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
     RowBox[{"lLog10", "=", 
      RowBox[{"Append", "[", 
@@ -2421,13 +2508,14 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
   "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
 matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
-decimal\\\\batch_1_log10.csv\>\"", ",", "outLog10"}], "]"}]}], "Input",
+log10_batch1.csv\>\"", ",", "outLog10"}], "]"}]}], "Input",
  CellChangeTimes->{{3.686469847535265*^9, 3.686469878088443*^9}, {
    3.6864700119352384`*^9, 3.686470019595252*^9}, 3.686470072405387*^9, 
    3.6864701296813164`*^9, {3.686470401734571*^9, 3.686470597958923*^9}, {
@@ -2439,32 +2527,15 @@ decimal\\\\batch_1_log10.csv\>\"", ",", "outLog10"}], "]"}]}], "Input",
    3.6868876769104633`*^9}, {3.686887777083716*^9, 3.6868878872559824`*^9}, {
    3.686888181214822*^9, 3.68688822866092*^9}, {3.686888337712223*^9, 
    3.686888351289254*^9}, {3.6868883967776303`*^9, 3.6868884405987864`*^9}, {
-   3.686888521833001*^9, 3.6868885388891306`*^9}}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-  "1.`80.", ",", "2.7182818284590451`80.43429448190327", ",", 
-   "2.7182818284590455`80.43429448190327", 
-   ",", "\<\"1.#\
-INF000000000000000000000000000000000000000000000000000000000000000000000000000\
-0e+000\"\>", 
-   ",", "\<\"-1.#\
-IND000000000000000000000000000000000000000000000000000000000000000000000000000\
-0e+000\"\>", ",", "0.`"}], "}"}]], "Output",
- CellChangeTimes->{{3.686470752717355*^9, 3.6864707611863675`*^9}, {
-   3.6864708366835556`*^9, 3.686470854481593*^9}, 3.6864708886216927`*^9, 
-   3.686471099065978*^9, {3.686471147785756*^9, 3.6864711670308495`*^9}, {
-   3.6864777526646023`*^9, 3.6864777645606265`*^9}, {3.686477947281579*^9, 
-   3.6864779674036245`*^9}, 3.6864780687378473`*^9, 3.6864824379189816`*^9, 
-   3.6868878945059986`*^9, 3.6868881037545958`*^9, {3.6868881349397306`*^9, 
-   3.6868881400257416`*^9}, {3.6868881838988256`*^9, 3.686888229150921*^9}, 
-   3.686888353398259*^9, {3.6868884155936856`*^9, 3.6868884412167873`*^9}, 
-   3.6868885398991365`*^9}],
+   3.686888521833001*^9, 3.6868885388891306`*^9}, 3.6872614097974734`*^9, {
+   3.6872614534055552`*^9, 3.6872614620590696`*^9}, {3.6872614968796263`*^9, 
+   3.687261497029627*^9}, {3.687261556606718*^9, 3.68726158307926*^9}, {
+   3.6872749038789225`*^9, 3.6872749373859754`*^9}, {3.6872749705230503`*^9, 
+   3.687274985645095*^9}}],
 
 Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
 \\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
-decimal\\\\batch_1_log10.csv\"\>"], "Output",
+log10_batch1.csv\"\>"], "Output",
  CellChangeTimes->{{3.686470752717355*^9, 3.6864707611863675`*^9}, {
    3.6864708366835556`*^9, 3.686470854481593*^9}, 3.6864708886216927`*^9, 
    3.686471099065978*^9, {3.686471147785756*^9, 3.6864711670308495`*^9}, {
@@ -2473,18 +2544,23 @@ decimal\\\\batch_1_log10.csv\"\>"], "Output",
    3.6868878945059986`*^9, 3.6868881037545958`*^9, {3.6868881349397306`*^9, 
    3.6868881400257416`*^9}, {3.6868881838988256`*^9, 3.686888229150921*^9}, 
    3.686888353398259*^9, {3.6868884155936856`*^9, 3.6868884412167873`*^9}, 
-   3.686888539919137*^9}]
+   3.6868885398991365`*^9, {3.6872615640742297`*^9, 3.6872615843022623`*^9}, {
+   3.6872749093919306`*^9, 3.687274937942977*^9}, {3.687274972683053*^9, 
+   3.6872749861350956`*^9}, 3.6872758993171635`*^9}]
 }, Open  ]]
 }, Closed]],
 
 Cell[CellGroupData[{
 
 Cell[TextData[{
- "log_batch2 (for ",
+ StyleBox["log_batch2 (for ",
+  FontColor->RGBColor[1, 0, 0]],
  Cell[BoxData[
   SubscriptBox["Log", "10"]],
-  CellChangeTimes->{{3.6868875854558725`*^9, 3.686887609901922*^9}}],
- ")"
+  CellChangeTimes->{{3.6868875854558725`*^9, 3.686887609901922*^9}},
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[")",
+  FontColor->RGBColor[1, 0, 0]]
 }], "Subsection",
  CellChangeTimes->{{3.6823139301237803`*^9, 3.6823139614685726`*^9}, {
    3.683252619472883*^9, 3.6832526203528843`*^9}, 3.6853367175676928`*^9, {
@@ -2570,13 +2646,14 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
   "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
 matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
-decimal\\\\batch_2_log10.csv\>\"", ",", "outLog10"}], "]"}]}], "Input",
+log10_batch2.csv\>\"", ",", "outLog10"}], "]"}]}], "Input",
  CellChangeTimes->{{3.686469847535265*^9, 3.686469878088443*^9}, {
    3.6864700119352384`*^9, 3.686470019595252*^9}, 3.686470072405387*^9, 
    3.6864701296813164`*^9, {3.686470401734571*^9, 3.686470597958923*^9}, {
@@ -2589,11 +2666,12 @@ decimal\\\\batch_2_log10.csv\>\"", ",", "outLog10"}], "]"}]}], "Input",
    3.686888181214822*^9, 3.68688822866092*^9}, {3.686888337712223*^9, 
    3.686888351289254*^9}, {3.6868883967776303`*^9, 3.6868884405987864`*^9}, {
    3.686888521833001*^9, 3.6868885388891306`*^9}, {3.6868886148764553`*^9, 
-   3.686888618463461*^9}, 3.6868886618595705`*^9}],
+   3.686888618463461*^9}, 3.6868886618595705`*^9, {3.687261416909484*^9, 
+   3.6872614197419877`*^9}, {3.6872614673315773`*^9, 3.687261472896588*^9}, {
+   3.6872615434391985`*^9, 3.687261543619199*^9}, {3.6872615888567686`*^9, 
+   3.6872615970567803`*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
-\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
-decimal\\\\batch_2_log10.csv\"\>"], "Output",
+Cell[BoxData["102"], "Output",
  CellChangeTimes->{{3.686470752717355*^9, 3.6864707611863675`*^9}, {
    3.6864708366835556`*^9, 3.686470854481593*^9}, 3.6864708886216927`*^9, 
    3.686471099065978*^9, {3.686471147785756*^9, 3.6864711670308495`*^9}, {
@@ -2602,18 +2680,36 @@ decimal\\\\batch_2_log10.csv\"\>"], "Output",
    3.6868878945059986`*^9, 3.6868881037545958`*^9, {3.6868881349397306`*^9, 
    3.6868881400257416`*^9}, {3.6868881838988256`*^9, 3.686888229150921*^9}, 
    3.686888353398259*^9, {3.6868884155936856`*^9, 3.6868884412167873`*^9}, 
-   3.6868885398991365`*^9, {3.686888649807539*^9, 3.6868886626715717`*^9}}]
+   3.6868885398991365`*^9, {3.686888649807539*^9, 3.6868886626715717`*^9}, 
+   3.687261592679274*^9}],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
+log10_batch2.csv\"\>"], "Output",
+ CellChangeTimes->{{3.686470752717355*^9, 3.6864707611863675`*^9}, {
+   3.6864708366835556`*^9, 3.686470854481593*^9}, 3.6864708886216927`*^9, 
+   3.686471099065978*^9, {3.686471147785756*^9, 3.6864711670308495`*^9}, {
+   3.6864777526646023`*^9, 3.6864777645606265`*^9}, {3.686477947281579*^9, 
+   3.6864779674036245`*^9}, 3.6864780687378473`*^9, 3.6864824379189816`*^9, 
+   3.6868878945059986`*^9, 3.6868881037545958`*^9, {3.6868881349397306`*^9, 
+   3.6868881400257416`*^9}, {3.6868881838988256`*^9, 3.686888229150921*^9}, 
+   3.686888353398259*^9, {3.6868884155936856`*^9, 3.6868884412167873`*^9}, 
+   3.6868885398991365`*^9, {3.686888649807539*^9, 3.6868886626715717`*^9}, 
+   3.687261592699274*^9}]
 }, Open  ]]
 }, Closed]],
 
 Cell[CellGroupData[{
 
 Cell[TextData[{
- "log_batch2 (for ",
+ StyleBox["log_batch3 (for ",
+  FontColor->RGBColor[1, 0, 0]],
  Cell[BoxData[
   SubscriptBox["Log", "10"]],
-  CellChangeTimes->{{3.6868875854558725`*^9, 3.686887609901922*^9}}],
- ")"
+  CellChangeTimes->{{3.6868875854558725`*^9, 3.686887609901922*^9}},
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[")",
+  FontColor->RGBColor[1, 0, 0]]
 }], "Subsection",
  CellChangeTimes->{{3.6823139301237803`*^9, 3.6823139614685726`*^9}, {
    3.683252619472883*^9, 3.6832526203528843`*^9}, 3.6853367175676928`*^9, {
@@ -2632,7 +2728,7 @@ Cell[TextData[{
    3.6864713181044416`*^9, 3.686471328031965*^9}, {3.6868872809293547`*^9, 
    3.686887369297537*^9}, {3.686887411020199*^9, 3.686887448701282*^9}, 
    3.6868876188079395`*^9, {3.6868885865583887`*^9, 3.6868886032864323`*^9}, 
-   3.686890015747064*^9}],
+   3.686890015747064*^9, {3.6872614264239974`*^9, 3.6872614272664986`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -2699,13 +2795,14 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
   "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
 matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
-decimal\\\\batch_3_log10.csv\>\"", ",", "outLog10"}], "]"}]}], "Input",
+log10_batch3.csv\>\"", ",", "outLog10"}], "]"}]}], "Input",
  CellChangeTimes->{{3.686469847535265*^9, 3.686469878088443*^9}, {
    3.6864700119352384`*^9, 3.686470019595252*^9}, 3.686470072405387*^9, 
    3.6864701296813164`*^9, {3.686470401734571*^9, 3.686470597958923*^9}, {
@@ -2719,12 +2816,15 @@ decimal\\\\batch_3_log10.csv\>\"", ",", "outLog10"}], "]"}]}], "Input",
    3.686888351289254*^9}, {3.6868883967776303`*^9, 3.6868884405987864`*^9}, {
    3.686888521833001*^9, 3.6868885388891306`*^9}, {3.6868886148764553`*^9, 
    3.686888618463461*^9}, 3.6868886618595705`*^9, {3.686888732120764*^9, 
-   3.6868887462778006`*^9}}],
+   3.6868887462778006`*^9}, {3.6872614331620255`*^9, 3.68726143635153*^9}, {
+   3.6872614776490955`*^9, 3.6872614810436*^9}, {3.68726155060421*^9, 
+   3.68726155072421*^9}, {3.6872616082792997`*^9, 3.687261613594808*^9}}],
 
 Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
 \\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
-decimal\\\\batch_3_log10.csv\"\>"], "Output",
- CellChangeTimes->{3.6868887471808023`*^9}]
+log10_batch3.csv\"\>"], "Output",
+ CellChangeTimes->{
+  3.6868887471808023`*^9, {3.6872616102658033`*^9, 3.6872616143483095`*^9}}]
 }, Open  ]]
 }, Closed]],
 
@@ -2766,10 +2866,9 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\inputData\\\\\
-input_non-trigon\\\\modf_batch_dec_out.csv\>\"", "]"}], "//", "Flatten"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_non-trigon\\\\modf_\
+batch.csv\>\"", "]"}], "//", "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -2811,14 +2910,14 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
         "]"}]}], "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\modf_batch.csv\>\"", ",", 
-   "outModf"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\modf_\
+batch.csv\>\"", ",", "outModf"}], "]"}]}], "Input",
  CellChangeTimes->{{3.686469847535265*^9, 3.686469878088443*^9}, {
    3.6864700119352384`*^9, 3.686470019595252*^9}, 3.686470072405387*^9, 
    3.6864701296813164`*^9, {3.686470401734571*^9, 3.686470597958923*^9}, {
@@ -2828,17 +2927,23 @@ Mathematica\\\\output_non-trigon\\\\decimal\\\\modf_batch.csv\>\"", ",",
    3.686479631083043*^9, 3.686479646392909*^9}, {3.6864797299102383`*^9, 
    3.686479786447358*^9}, {3.686479820724437*^9, 3.6864798277114515`*^9}, {
    3.6864798675315313`*^9, 3.6864798756125507`*^9}, {3.6864799457637424`*^9, 
-   3.686479948909748*^9}, {3.6864799827478313`*^9, 3.6864799850878353`*^9}}],
+   3.686479948909748*^9}, {3.6864799827478313`*^9, 3.6864799850878353`*^9}, {
+   3.687261649593248*^9, 3.6872617285450583`*^9}, {3.687261974440361*^9, 
+   3.6872619800633745`*^9}, {3.6872620155595355`*^9, 3.687262030167561*^9}, {
+   3.6872750888326645`*^9, 3.687275122786719*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\modf_batch.csv\"\>"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
+modf_batch.csv\"\>"], "Output",
  CellChangeTimes->{{3.686470752717355*^9, 3.6864707611863675`*^9}, {
    3.6864708366835556`*^9, 3.686470854481593*^9}, 3.6864708886216927`*^9, 
    3.686471099065978*^9, {3.686471147785756*^9, 3.6864711670308495`*^9}, {
    3.6864794027718754`*^9, 3.686479409838895*^9}, 3.6864797391512623`*^9, 
    3.686479787680361*^9, 3.6864798288554535`*^9, 3.6864798807925615`*^9, 
-   3.6864799525467577`*^9, 3.686479991937848*^9, 3.6864824380729837`*^9}]
+   3.6864799525467577`*^9, 3.686479991937848*^9, 3.6864824380729837`*^9, 
+   3.687261652640252*^9, 3.687261698460322*^9, {3.6872619749623623`*^9, 
+   3.6872619803633747`*^9}, 3.6872620321300635`*^9, {3.6872750894266653`*^9, 
+   3.6872751232467194`*^9}, 3.687275904508174*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -2911,6 +3016,10 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
        RowBox[{"Length", "[", "data", "]"}], "/", "2"}], "-", "1"}]}], ",", 
     " ", 
     RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"(*", " ", 
+     RowBox[{
+      RowBox[{"y", "^", "x"}], " ", "not", " ", 
+      RowBox[{"x", "^", "y"}]}], "*)"}], "\[IndentingNewLine]", 
     RowBox[{"lPow", "=", 
      RowBox[{"Append", "[", 
       RowBox[{"lPow", ",", " ", 
@@ -2924,22 +3033,21 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
            RowBox[{
             RowBox[{"Length", "[", "data", "]"}], "/", "2"}], "+", "i"}], 
           "\[RightDoubleBracket]"}], ",", " ", 
-         RowBox[{"Power", "[", 
+         RowBox[{"Power", "[", " ", 
           RowBox[{
-           RowBox[{
-           "data", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
-           ",", " ", 
            RowBox[{"data", "\[LeftDoubleBracket]", 
             RowBox[{
              RowBox[{
               RowBox[{"Length", "[", "data", "]"}], "/", "2"}], "+", "i"}], 
-            "\[RightDoubleBracket]"}]}], "]"}]}], "}"}]}], "]"}]}]}], "]"}], 
-  ";"}], "\[IndentingNewLine]", 
+            "\[RightDoubleBracket]"}], ",", 
+           RowBox[{
+           "data", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}]}], 
+          "]"}]}], "}"}]}], "]"}]}]}], "]"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
   "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
-matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
-decimal\\\\pow_batch.csv\>\"", ",", "lPow"}], "]"}]}], "Input",
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\pow_\
+batch.csv\>\"", ",", "lPow"}], "]"}]}], "Input",
  CellChangeTimes->{{3.686469847535265*^9, 3.686469878088443*^9}, {
    3.6864700119352384`*^9, 3.686470019595252*^9}, 3.686470072405387*^9, 
    3.6864701296813164`*^9, {3.686470401734571*^9, 3.686470597958923*^9}, {
@@ -2954,33 +3062,9 @@ decimal\\\\pow_batch.csv\>\"", ",", "lPow"}], "]"}]}], "Input",
    3.6864809147767935`*^9}, {3.6864809614299903`*^9, 
    3.6864811069705787`*^9}, {3.686889034455552*^9, 3.6868890798746448`*^9}, {
    3.686889142021284*^9, 3.6868892809515886`*^9}, {3.6868893200966663`*^9, 
-   3.6868896203442583`*^9}, {3.686889659032336*^9, 3.6868896791763735`*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Infinity", "::", "indet"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Indeterminate expression \[NoBreak]\\!\\(\\((\\(-\
-\[Infinity]\\))\\)\\^0.`\\)\[NoBreak] encountered. \\!\\(\\*ButtonBox[\\\"\
-\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/indet\\\", ButtonNote -> \
-\\\"Infinity::indet\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{{3.6868895800471625`*^9, 3.686889597898196*^9}, {
-  3.686889672137359*^9, 3.6868896801363745`*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Infinity", "::", "indet"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Indeterminate expression \[NoBreak]\\!\\(\[Infinity]\\^0.`\
-\\)\[NoBreak] encountered. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/indet\\\", ButtonNote -> \
-\\\"Infinity::indet\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{{3.6868895800471625`*^9, 3.686889597898196*^9}, {
-  3.686889672137359*^9, 3.6868896801363745`*^9}}],
+   3.6868896203442583`*^9}, {3.686889659032336*^9, 3.6868896791763735`*^9}, {
+   3.687262061744348*^9, 3.687262107031539*^9}, {3.6872753486328955`*^9, 
+   3.6872753796339583`*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -2993,11 +3077,12 @@ ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/indet\\\", ButtonNote -> \
 \\\"Power::indet\\\"]\\)\"\>"}]], "Message", "MSG",
  CellChangeTimes->{{3.6868895800471625`*^9, 3.686889597898196*^9}, {
-  3.686889672137359*^9, 3.6868896801363745`*^9}}],
+   3.686889672137359*^9, 3.6868896801363745`*^9}, {3.6872620862443943`*^9, 
+   3.68726210790154*^9}, 3.6872753816869626`*^9, 3.687275906879184*^9}],
 
 Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
 \\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
-decimal\\\\pow_batch.csv\"\>"], "Output",
+pow_batch.csv\"\>"], "Output",
  CellChangeTimes->{{3.686470752717355*^9, 3.6864707611863675`*^9}, {
    3.6864708366835556`*^9, 3.686470854481593*^9}, 3.6864708886216927`*^9, 
    3.686471099065978*^9, {3.686471147785756*^9, 3.6864711670308495`*^9}, {
@@ -3009,7 +3094,8 @@ decimal\\\\pow_batch.csv\"\>"], "Output",
    3.6868892235314755`*^9, 3.686889252169533*^9}, 3.6868893295876827`*^9, {
    3.6868893686637583`*^9, 3.6868893965588117`*^9}, {3.6868894352228904`*^9, 
    3.6868894481629148`*^9}, {3.686889486812986*^9, 3.6868895979881964`*^9}, {
-   3.686889672157359*^9, 3.6868896801463747`*^9}}]
+   3.686889672157359*^9, 3.6868896801463747`*^9}, {3.6872620863343945`*^9, 
+   3.68726210791154*^9}, 3.6872753816969624`*^9, 3.687275906899184*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -3044,10 +3130,9 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\inputData\\\\\
-input_non-trigon\\\\rounding_batch_dec_out.csv\>\"", "]"}], "//", 
-    "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_non-trigon\\\\rounding_\
+batch.csv\>\"", "]"}], "//", "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -3085,14 +3170,14 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
         "]"}]}], "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\rounding_batch.csv\>\"", ",", 
-   "lRound"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
+round_batch.csv\>\"", ",", "lRound"}], "]"}]}], "Input",
  CellChangeTimes->{{3.686469847535265*^9, 3.686469878088443*^9}, {
    3.6864700119352384`*^9, 3.686470019595252*^9}, 3.686470072405387*^9, 
    3.6864701296813164`*^9, {3.686470401734571*^9, 3.686470597958923*^9}, {
@@ -3107,12 +3192,12 @@ Mathematica\\\\output_non-trigon\\\\decimal\\\\rounding_batch.csv\>\"", ",",
    3.6864809147767935`*^9}, {3.6864809614299903`*^9, 
    3.6864811069705787`*^9}, {3.6864817056983037`*^9, 3.686481787881629*^9}, {
    3.6864818453826537`*^9, 3.6864818593223963`*^9}, {3.6864819139857683`*^9, 
-   3.6864819266009293`*^9}}],
+   3.6864819266009293`*^9}, 3.6872621421631126`*^9, {3.6872703001880636`*^9, 
+   3.6872703299171143`*^9}, {3.6872754957852*^9, 3.6872755275463867`*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\rounding_batch.csv\"\>"], \
-"Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
+round_batch.csv\"\>"], "Output",
  CellChangeTimes->{{3.686470752717355*^9, 3.6864707611863675`*^9}, {
    3.6864708366835556`*^9, 3.686470854481593*^9}, 3.6864708886216927`*^9, 
    3.686471099065978*^9, {3.686471147785756*^9, 3.6864711670308495`*^9}, {
@@ -3121,7 +3206,8 @@ Mathematica\\\\output_non-trigon\\\\decimal\\\\rounding_batch.csv\"\>"], \
    3.6864799525467577`*^9, 3.686479991937848*^9, 3.6864810250822296`*^9, 
    3.6864811098415895`*^9, {3.6864817832718863`*^9, 3.6864817884546614`*^9}, 
    3.6864818606994667`*^9, {3.6864819145778017`*^9, 3.6864819270759563`*^9}, 
-   3.6864824382229843`*^9}]
+   3.6864824382229843`*^9, {3.687275496385201*^9, 3.6872755300503907`*^9}, 
+   3.687275909510189*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -3197,13 +3283,14 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
         "]"}]}], "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
   "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
 matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
-decimal\\\\floor_batch.csv\>\"", ",", "lFloor"}], "]"}]}], "Input",
+floor_batch.csv\>\"", ",", "lFloor"}], "]"}]}], "Input",
  CellChangeTimes->{{3.686469847535265*^9, 3.686469878088443*^9}, {
    3.6864700119352384`*^9, 3.686470019595252*^9}, 3.686470072405387*^9, 
    3.6864701296813164`*^9, {3.686470401734571*^9, 3.686470597958923*^9}, {
@@ -3221,11 +3308,12 @@ decimal\\\\floor_batch.csv\>\"", ",", "lFloor"}], "]"}]}], "Input",
    3.6864819266009293`*^9}, {3.68699997146597*^9, 3.6869999764149847`*^9}, {
    3.6870001945977335`*^9, 3.6870002032887583`*^9}, {3.6870005945218782`*^9, 
    3.687000608944916*^9}, 3.6870006883621197`*^9, {3.687001671237966*^9, 
-   3.687001674112975*^9}}],
+   3.687001674112975*^9}, 3.6872698754786077`*^9, {3.6872703432101393`*^9, 
+   3.687270359692169*^9}, {3.687275536364402*^9, 3.6872755365744023`*^9}}],
 
 Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
 \\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
-decimal\\\\floor_batch.csv\"\>"], "Output",
+floor_batch.csv\"\>"], "Output",
  CellChangeTimes->{{3.686470752717355*^9, 3.6864707611863675`*^9}, {
    3.6864708366835556`*^9, 3.686470854481593*^9}, 3.6864708886216927`*^9, 
    3.686471099065978*^9, {3.686471147785756*^9, 3.6864711670308495`*^9}, {
@@ -3237,7 +3325,7 @@ decimal\\\\floor_batch.csv\"\>"], "Output",
    3.6864824382229843`*^9, 3.687000153653637*^9, {3.6870001972597446`*^9, 
    3.6870002040837607`*^9}, 3.6870006108179197`*^9, 3.6870006896001263`*^9, 
    3.687000875754081*^9, 3.6870010017843847`*^9, 3.6870015775616274`*^9, 
-   3.6870016753889804`*^9}]
+   3.6870016753889804`*^9, 3.687275537650404*^9, 3.687275912135195*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -3343,13 +3431,14 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
         "]"}]}], "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
   "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
 matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
-decimal\\\\ceiling_batch.csv\>\"", ",", "lCeiling"}], "]"}]}], "Input",
+ceiling_batch.csv\>\"", ",", "lCeiling"}], "]"}]}], "Input",
  CellChangeTimes->{{3.686469847535265*^9, 3.686469878088443*^9}, {
    3.6864700119352384`*^9, 3.686470019595252*^9}, 3.686470072405387*^9, 
    3.6864701296813164`*^9, {3.686470401734571*^9, 3.686470597958923*^9}, {
@@ -3366,11 +3455,12 @@ decimal\\\\ceiling_batch.csv\>\"", ",", "lCeiling"}], "]"}]}], "Input",
    3.6864818453826537`*^9, 3.6864818593223963`*^9}, {3.6864819139857683`*^9, 
    3.6864819266009293`*^9}, {3.6870012069711075`*^9, 3.687001218929139*^9}, 
    3.687001256033774*^9, {3.687001501594717*^9, 3.6870015036358147`*^9}, 
-   3.687001701677117*^9}],
+   3.687001701677117*^9, {3.6872703797862043`*^9, 3.687270394118227*^9}, {
+   3.687275546812419*^9, 3.6872755470824194`*^9}}],
 
 Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
 \\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
-decimal\\\\ceiling_batch.csv\"\>"], "Output",
+ceiling_batch.csv\"\>"], "Output",
  CellChangeTimes->{{3.686470752717355*^9, 3.6864707611863675`*^9}, {
    3.6864708366835556`*^9, 3.686470854481593*^9}, 3.6864708886216927`*^9, 
    3.686471099065978*^9, {3.686471147785756*^9, 3.6864711670308495`*^9}, {
@@ -3379,7 +3469,8 @@ decimal\\\\ceiling_batch.csv\"\>"], "Output",
    3.6864799525467577`*^9, 3.686479991937848*^9, 3.6864810250822296`*^9, 
    3.6864811098415895`*^9, {3.6864817832718863`*^9, 3.6864817884546614`*^9}, 
    3.6864818606994667`*^9, {3.6864819145778017`*^9, 3.6864819270759563`*^9}, 
-   3.6864824382229843`*^9, 3.6870017210591836`*^9}]
+   3.6864824382229843`*^9, 3.6870017210591836`*^9, 3.6872755477944207`*^9, 
+   3.687275915558202*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -3411,10 +3502,9 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\inputData\\\\\
-input_non-trigon\\\\sqrt_batch1_dec_out.csv\>\"", "]"}], "//", "Flatten"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_non-trigon\\\\sqrt_\
+batch1.csv\>\"", "]"}], "//", "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -3452,14 +3542,14 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
         "]"}]}], "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\sqrt_batch1.csv\>\"", ",", 
-   "outSqrt"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\sqrt_\
+batch1_batch.csv\>\"", ",", "outSqrt"}], "]"}]}], "Input",
  CellChangeTimes->{{3.686469847535265*^9, 3.686469878088443*^9}, {
    3.6864700119352384`*^9, 3.686470019595252*^9}, 3.686470072405387*^9, 
    3.6864701296813164`*^9, {3.686470401734571*^9, 3.686470597958923*^9}, {
@@ -3469,23 +3559,27 @@ Mathematica\\\\output_non-trigon\\\\decimal\\\\sqrt_batch1.csv\>\"", ",",
    3.686477801236695*^9}, {3.6864779447760715`*^9, 3.686477966146618*^9}, {
    3.686478007112713*^9, 3.686478067713846*^9}, {3.6864819918154593`*^9, 
    3.6864820081183915`*^9}, {3.686482113898264*^9, 3.686482148006135*^9}, {
-   3.6864822008891864`*^9, 3.6864822053797345`*^9}}],
+   3.6864822008891864`*^9, 3.6864822053797345`*^9}, 3.687270406682248*^9, {
+   3.687270520791093*^9, 3.6872705426401553`*^9}, {3.6872755704817533`*^9, 
+   3.6872755825807724`*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\sqrt_batch1.csv\"\>"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\\
+sqrt_batch1_batch.csv\"\>"], "Output",
  CellChangeTimes->{{3.686470752717355*^9, 3.6864707611863675`*^9}, {
    3.6864708366835556`*^9, 3.686470854481593*^9}, 3.6864708886216927`*^9, 
    3.686471099065978*^9, {3.686471147785756*^9, 3.6864711670308495`*^9}, {
    3.6864777526646023`*^9, 3.6864777645606265`*^9}, {3.686477947281579*^9, 
    3.6864779674036245`*^9}, 3.6864780687378473`*^9, 3.686482150197163*^9, 
-   3.686482206811247*^9, 3.6864824382629843`*^9}]
+   3.686482206811247*^9, 3.6864824382629843`*^9, {3.6872755709517546`*^9, 
+   3.6872755831207733`*^9}, 3.6872759180012074`*^9}]
 }, Open  ]]
 }, Closed]],
 
 Cell[CellGroupData[{
 
-Cell["sqrt_batch2 (for Sqrt)", "Subsection",
+Cell[TextData[StyleBox["sqrt_batch2 (for Sqrt)",
+ FontColor->RGBColor[1, 0, 0]]], "Subsection",
  CellChangeTimes->{{3.6823139301237803`*^9, 3.6823139614685726`*^9}, {
    3.683252619472883*^9, 3.6832526203528843`*^9}, 3.6853367175676928`*^9, {
    3.6853578584858437`*^9, 3.685357860386952*^9}, {3.685361826636798*^9, 
@@ -3511,10 +3605,9 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\inputData\\\\\
-input_non-trigon\\\\sqrt_batch2_dec_out.csv\>\"", "]"}], "//", "Flatten"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_non-trigon\\\\sqrt_\
+batch2.csv\>\"", "]"}], "//", "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -3556,10 +3649,9 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\sqrt_batch2.csv\>\"", ",", 
-   "outSqrt"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\sqrt_\
+batch2_batch.csv\>\"", ",", "outSqrt"}], "]"}]}], "Input",
  CellChangeTimes->{{3.686469847535265*^9, 3.686469878088443*^9}, {
    3.6864700119352384`*^9, 3.686470019595252*^9}, 3.686470072405387*^9, 
    3.6864701296813164`*^9, {3.686470401734571*^9, 3.686470597958923*^9}, {
@@ -3569,7 +3661,8 @@ Mathematica\\\\output_non-trigon\\\\decimal\\\\sqrt_batch2.csv\>\"", ",",
    3.686477801236695*^9}, {3.6864779447760715`*^9, 3.686477966146618*^9}, {
    3.686478007112713*^9, 3.686478067713846*^9}, {3.6864819918154593`*^9, 
    3.6864820081183915`*^9}, {3.686482113898264*^9, 3.686482148006135*^9}, {
-   3.686482186111046*^9, 3.6864822159283185`*^9}}],
+   3.686482186111046*^9, 3.6864822159283185`*^9}, {3.68727055439818*^9, 
+   3.6872705687232094`*^9}}],
 
 Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
 Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
@@ -3585,7 +3678,8 @@ Mathematica\\\\output_non-trigon\\\\decimal\\\\sqrt_batch2.csv\"\>"], "Output",
 
 Cell[CellGroupData[{
 
-Cell["sqrt_batch3 (for Sqrt)", "Subsection",
+Cell[TextData[StyleBox["sqrt_batch3 (for Sqrt)",
+ FontColor->RGBColor[1, 0, 0]]], "Subsection",
  CellChangeTimes->{{3.6823139301237803`*^9, 3.6823139614685726`*^9}, {
    3.683252619472883*^9, 3.6832526203528843`*^9}, 3.6853367175676928`*^9, {
    3.6853578584858437`*^9, 3.685357860386952*^9}, {3.685361826636798*^9, 
@@ -3612,10 +3706,9 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\inputData\\\\\
-input_non-trigon\\\\sqrt_batch3_dec_out.csv\>\"", "]"}], "//", "Flatten"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_non-trigon\\\\sqrt_\
+batch3.csv\>\"", "]"}], "//", "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -3657,10 +3750,9 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
-Mathematica\\\\output_non-trigon\\\\decimal\\\\sqrt_batch3.csv\>\"", ",", 
-   "outSqrt"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output_non-trigon\\\\sqrt_\
+batch2_batch.csv\>\"", ",", "outSqrt"}], "]"}]}], "Input",
  CellChangeTimes->{{3.686469847535265*^9, 3.686469878088443*^9}, {
    3.6864700119352384`*^9, 3.686470019595252*^9}, 3.686470072405387*^9, 
    3.6864701296813164`*^9, {3.686470401734571*^9, 3.686470597958923*^9}, {
@@ -3671,7 +3763,7 @@ Mathematica\\\\output_non-trigon\\\\decimal\\\\sqrt_batch3.csv\>\"", ",",
    3.686478007112713*^9, 3.686478067713846*^9}, {3.6864819918154593`*^9, 
    3.6864820081183915`*^9}, {3.686482113898264*^9, 3.686482148006135*^9}, {
    3.686482186111046*^9, 3.6864822159283185`*^9}, {3.6864822976081142`*^9, 
-   3.686482300459146*^9}}],
+   3.686482300459146*^9}, {3.6872705782882257`*^9, 3.6872705881322436`*^9}}],
 
 Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
 Mathlib4Space\\\\matlib4space-master\\\\matlib4space-master\\\\outputData\\\\\
@@ -3684,7 +3776,7 @@ Mathematica\\\\output_non-trigon\\\\decimal\\\\sqrt_batch3.csv\"\>"], "Output",
    3.6864822173698325`*^9, 3.6864823064962177`*^9, 3.6864824383539867`*^9}]
 }, Open  ]]
 }, Closed]]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -3712,10 +3804,10 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\inputData\\\\decimals\\\\input_\
-identities_trigon\\\\trigon_ident_batchX.csv\>\"", "]"}], "//", "Flatten"}]}],
-   ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_identities_trigon\\\\\
+trigon_ident_batchX.csv\>\"", "]"}], "//", "Flatten"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -3760,13 +3852,14 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
           "]"}], "^", "2"}]}], ",", "1"}], " ", "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
-       RowBox[{"Length", "[", "data", "]"}]}], "}"}]}], "]"}]}], 
+       RowBox[{
+        RowBox[{"Length", "[", "data", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-identities_trigon\\\\trig_ident1.csv\>\"", ",", "out"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\outout_identities_trigon\\\
+\\trig_ident1.csv\>\"", ",", "out"}], "]"}]}], "Input",
  CellChangeTimes->{{3.6861329861915655`*^9, 3.6861330475286837`*^9}, {
    3.686389707082057*^9, 3.686389709262063*^9}, {3.686389743197129*^9, 
    3.6863897587541556`*^9}, {3.686391596922539*^9, 3.6863916184625835`*^9}, {
@@ -3787,15 +3880,19 @@ identities_trigon\\\\trig_ident1.csv\>\"", ",", "out"}], "]"}]}], "Input",
    3.6865614322741175`*^9}, {3.686561463227172*^9, 3.686561487807214*^9}, {
    3.6865615782873898`*^9, 3.686561593359417*^9}, 3.6865617038116236`*^9, 
    3.686561748772705*^9, {3.68656186886619*^9, 3.6865619459103317`*^9}, {
-   3.6865625949927473`*^9, 3.6865626067757735`*^9}}],
+   3.6865625949927473`*^9, 3.6865626067757735`*^9}, {3.687276565377476*^9, 
+   3.6872766609018755`*^9}, {3.687276833329445*^9, 3.6872768365034494`*^9}, 
+   3.687276874639517*^9}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-identities_trigon\\\\trig_ident1.csv\"\>"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\outout_identities_\
+trigon\\\\trig_ident1.csv\"\>"], "Output",
  CellChangeTimes->{
   3.6864637719492683`*^9, 3.6865614933192277`*^9, 3.686561593939418*^9, {
    3.686561704281624*^9, 3.6865617497537065`*^9}, {3.6865619206522846`*^9, 
-   3.6865619472783337`*^9}, 3.686562618698795*^9, 3.686566634410348*^9}]
+   3.6865619472783337`*^9}, 3.686562618698795*^9, 3.686566634410348*^9, 
+   3.6872765677594795`*^9, {3.6872766293755765`*^9, 3.687276661531876*^9}, 
+   3.687276875269518*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -3823,10 +3920,10 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\inputData\\\\decimals\\\\input_\
-identities_trigon\\\\trigon_ident_batchXY.csv\>\"", "]"}], "//", 
-    "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_identities_trigon\\\\\
+trigon_ident_batchXY.csv\>\"", "]"}], "//", "Flatten"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"data", " ", "=", " ", 
@@ -3922,9 +4019,9 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-identities_trigon\\\\trig_ident2.csv\>\"", ",", "out"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\outout_identities_trigon\\\
+\\trig_ident2.csv\>\"", ",", "out"}], "]"}]}], "Input",
  CellChangeTimes->{{3.6861329861915655`*^9, 3.6861330475286837`*^9}, {
    3.686389707082057*^9, 3.686389709262063*^9}, {3.686389743197129*^9, 
    3.6863897587541556`*^9}, {3.686391596922539*^9, 3.6863916184625835`*^9}, {
@@ -3943,14 +4040,17 @@ identities_trigon\\\\trig_ident2.csv\>\"", ",", "out"}], "]"}]}], "Input",
    3.6865648136544867`*^9, 3.6865648519065666`*^9}, {3.6865649095287123`*^9, 
    3.686564949786793*^9}, {3.6865649822468767`*^9, 3.686565130761194*^9}, {
    3.686565772615077*^9, 3.686565787909111*^9}, 3.6865658312231965`*^9, {
-   3.6865659827765193`*^9, 3.686565990299532*^9}}],
+   3.6865659827765193`*^9, 3.686565990299532*^9}, {3.6872767141789937`*^9, 
+   3.6872767327720265`*^9}, {3.687276771010086*^9, 3.687276800411392*^9}, {
+   3.6872768453304644`*^9, 3.687276850853473*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-identities_trigon\\\\trig_ident2.csv\"\>"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\outout_identities_\
+trigon\\\\trig_ident2.csv\"\>"], "Output",
  CellChangeTimes->{{3.68656512800319*^9, 3.686565131465195*^9}, 
    3.6865657906131153`*^9, 3.6865658316531973`*^9, {3.686565983826521*^9, 
-   3.6865659907995324`*^9}, 3.686566634460348*^9}]
+   3.6865659907995324`*^9}, 3.686566634460348*^9, {3.687276771570087*^9, 
+   3.687276802121394*^9}, 3.6872768819745283`*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -3978,10 +4078,10 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\inputData\\\\decimals\\\\input_\
-identities_trigon\\\\trigon_ident_batchXY.csv\>\"", "]"}], "//", 
-    "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_identities_trigon\\\\\
+trigon_ident_batchXY.csv\>\"", "]"}], "//", "Flatten"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"data", " ", "=", " ", 
@@ -4078,17 +4178,18 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-identities_trigon\\\\trig_ident3.csv\>\"", ",", "out"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\outout_identities_trigon\\\
+\\trig_ident3.csv\>\"", ",", "out"}], "]"}]}], "Input",
  CellChangeTimes->{{3.6865652333893547`*^9, 3.6865652605653987`*^9}, {
-  3.6865660456288915`*^9, 3.6865661233730583`*^9}}],
+  3.6865660456288915`*^9, 3.6865661233730583`*^9}, {3.687276909901578*^9, 
+  3.6872769211595955`*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-identities_trigon\\\\trig_ident3.csv\"\>"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\outout_identities_\
+trigon\\\\trig_ident3.csv\"\>"], "Output",
  CellChangeTimes->{3.686565274714426*^9, 3.6865661517381144`*^9, 
-  3.686566634500348*^9}]
+  3.686566634500348*^9, 3.6872768910615444`*^9, 3.6872769224335976`*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -4113,10 +4214,10 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\inputData\\\\decimals\\\\input_\
-identities_trigon\\\\trigon_ident_batchX.csv\>\"", "]"}], "//", "Flatten"}]}],
-   ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_identities_trigon\\\\\
+trigon_ident_batchX.csv\>\"", "]"}], "//", "Flatten"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -4168,9 +4269,9 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-identities_trigon\\\\trig_ident4.csv\>\"", ",", "out"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\outout_identities_trigon\\\
+\\trig_ident4.csv\>\"", ",", "out"}], "]"}]}], "Input",
  CellChangeTimes->{{3.6861329861915655`*^9, 3.6861330475286837`*^9}, {
    3.686389707082057*^9, 3.686389709262063*^9}, {3.686389743197129*^9, 
    3.6863897587541556`*^9}, {3.686391596922539*^9, 3.6863916184625835`*^9}, {
@@ -4193,7 +4294,7 @@ identities_trigon\\\\trig_ident4.csv\>\"", ",", "out"}], "]"}]}], "Input",
    3.686561966113391*^9, 3.6865619830504193`*^9}, {3.686562013792592*^9, 
    3.686562103938901*^9}, {3.6865623100603313`*^9, 3.6865623163993416`*^9}, {
    3.686562364927453*^9, 3.686562392601514*^9}, {3.6865626568311214`*^9, 
-   3.6865626601481266`*^9}}],
+   3.6865626601481266`*^9}, {3.687276946707635*^9, 3.6872769602166576`*^9}}],
 
 Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
 Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
@@ -4229,10 +4330,10 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\inputData\\\\decimals\\\\input_\
-identities_trigon\\\\trigon_ident_batchXY.csv\>\"", "]"}], "//", 
-    "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_identities_trigon\\\\\
+trigon_ident_batchXY.csv\>\"", "]"}], "//", "Flatten"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"data", " ", "=", " ", 
@@ -4331,9 +4432,9 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-identities_trigon\\\\trig_ident5.csv\>\"", ",", "out"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\outout_identities_trigon\\\
+\\trig_ident4.csv\>\"", ",", "out"}], "]"}]}], "Input",
  CellChangeTimes->{{3.6861329861915655`*^9, 3.6861330475286837`*^9}, {
    3.686389707082057*^9, 3.686389709262063*^9}, {3.686389743197129*^9, 
    3.6863897587541556`*^9}, {3.686391596922539*^9, 3.6863916184625835`*^9}, {
@@ -4358,13 +4459,13 @@ identities_trigon\\\\trig_ident5.csv\>\"", ",", "out"}], "]"}]}], "Input",
    3.686565293182469*^9, 3.686565328755535*^9}, {3.686565553995672*^9, 
    3.686565689963924*^9}, {3.6865663883887663`*^9, 3.6865663990397882`*^9}, {
    3.6865664435888863`*^9, 3.6865664589739213`*^9}, {3.6865665289450617`*^9, 
-   3.686566541199088*^9}}],
+   3.686566541199088*^9}, {3.687276983881697*^9, 3.687276993441712*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-identities_trigon\\\\trig_ident5.csv\"\>"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\outout_identities_\
+trigon\\\\trig_ident4.csv\"\>"], "Output",
  CellChangeTimes->{3.686463772239269*^9, 3.6865665449510965`*^9, 
-  3.686566634600348*^9}]
+  3.686566634600348*^9, 3.6872770726877747`*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -4390,10 +4491,10 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\inputData\\\\decimals\\\\input_\
-identities_trigon\\\\trigon_ident_batchX.csv\>\"", "]"}], "//", "Flatten"}]}],
-   ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_identities_trigon\\\\\
+trigon_ident_batchX.csv\>\"", "]"}], "//", "Flatten"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"data", " ", "=", " ", 
    RowBox[{"Replace", "[", 
@@ -4443,17 +4544,18 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-identities_trigon\\\\trig_ident6.csv\>\"", ",", "out"}], "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\outout_identities_trigon\\\
+\\trig_ident5.csv\>\"", ",", "out"}], "]"}]}], "Input",
  CellChangeTimes->{{3.686562445743626*^9, 3.686562561613875*^9}, {
-  3.6865627174453773`*^9, 3.6865627207953825`*^9}}],
+  3.6865627174453773`*^9, 3.6865627207953825`*^9}, {3.6872770563827286`*^9, 
+  3.687277064563752*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-identities_trigon\\\\trig_ident6.csv\"\>"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\outout_identities_\
+trigon\\\\trig_ident5.csv\"\>"], "Output",
  CellChangeTimes->{{3.6865625081267567`*^9, 3.686562512338765*^9}, 
-   3.686562722780386*^9, 3.6865666346403484`*^9}]
+   3.686562722780386*^9, 3.6865666346403484`*^9, 3.687277065516754*^9}]
 }, Open  ]]
 }, Closed]]
 }, Closed]],
@@ -4486,10 +4588,10 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\inputData\\\\decimals\\\\input_\
-identities_non-trigon\\\\nontrigon_ident_batch1.csv\>\"", "]"}], "//", 
-    "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_identities_non-trigon\\\
+\\nontrigon_ident_batch1.csv\>\"", "]"}], "//", "Flatten"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"data", " ", "=", " ", 
@@ -4573,10 +4675,9 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-identities_non-trigon\\\\nontrig_ident1.csv\>\"", ",", "out"}], 
-  "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output_identities_non-\
+trigon\\\\nontrigon_ident_batch1.csv\>\"", ",", "out"}], "]"}]}], "Input",
  CellChangeTimes->{{3.6861329861915655`*^9, 3.6861330475286837`*^9}, {
    3.686389707082057*^9, 3.686389709262063*^9}, {3.686389743197129*^9, 
    3.6863897587541556`*^9}, {3.686391596922539*^9, 3.6863916184625835`*^9}, {
@@ -4603,7 +4704,7 @@ identities_non-trigon\\\\nontrig_ident1.csv\>\"", ",", "out"}],
    3.68656843688359*^9, 3.686568437395591*^9}, {3.6865684907027035`*^9, 
    3.686568528270785*^9}, 3.686568569509863*^9, {3.686568657947087*^9, 
    3.6865687059081783`*^9}, {3.6865687972623863`*^9, 3.6865688039953957`*^9}, 
-   3.6865688417254715`*^9}],
+   3.6865688417254715`*^9, {3.687277237272686*^9, 3.687277282043768*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -4617,7 +4718,8 @@ ButtonData:>\\\"paclet:ref/message/General/ovfl\\\", ButtonNote -> \
  CellChangeTimes->{
   3.686568439753595*^9, 3.686568571422866*^9, {3.686568658382088*^9, 
    3.686568721522229*^9}, {3.68656879974339*^9, 3.686568804475397*^9}, 
-   3.686568842834473*^9, 3.6865699231126375`*^9}],
+   3.686568842834473*^9, 3.6865699231126375`*^9, 3.6872772830707693`*^9, 
+   3.687277845628868*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -4631,7 +4733,8 @@ ButtonData:>\\\"paclet:ref/message/General/unfl\\\", ButtonNote -> \
  CellChangeTimes->{
   3.686568439753595*^9, 3.686568571422866*^9, {3.686568658382088*^9, 
    3.686568721522229*^9}, {3.68656879974339*^9, 3.686568804475397*^9}, 
-   3.686568842834473*^9, 3.6865699231126375`*^9}],
+   3.686568842834473*^9, 3.6865699231126375`*^9, 3.6872772830707693`*^9, 
+   3.6872778456388683`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -4645,7 +4748,8 @@ ButtonData:>\\\"paclet:ref/message/General/ovfl\\\", ButtonNote -> \
  CellChangeTimes->{
   3.686568439753595*^9, 3.686568571422866*^9, {3.686568658382088*^9, 
    3.686568721522229*^9}, {3.68656879974339*^9, 3.686568804475397*^9}, 
-   3.686568842834473*^9, 3.6865699231226373`*^9}],
+   3.686568842834473*^9, 3.6865699231126375`*^9, 3.6872772830707693`*^9, 
+   3.6872778456388683`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -4659,7 +4763,8 @@ ButtonData:>\\\"paclet:ref/message/General/ovfl\\\", ButtonNote -> \
  CellChangeTimes->{
   3.686568439753595*^9, 3.686568571422866*^9, {3.686568658382088*^9, 
    3.686568721522229*^9}, {3.68656879974339*^9, 3.686568804475397*^9}, 
-   3.686568842834473*^9, 3.6865699231226373`*^9}],
+   3.686568842834473*^9, 3.6865699231126375`*^9, 3.6872772830707693`*^9, 
+   3.6872778456388683`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -4675,18 +4780,20 @@ ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
  CellChangeTimes->{
   3.686568439753595*^9, 3.686568571422866*^9, {3.686568658382088*^9, 
    3.686568721522229*^9}, {3.68656879974339*^9, 3.686568804475397*^9}, 
-   3.686568842834473*^9, 3.686569923132637*^9}],
+   3.686568842834473*^9, 3.6865699231126375`*^9, 3.6872772830707693`*^9, 
+   3.6872778456488686`*^9}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-identities_non-trigon\\\\nontrig_ident1.csv\"\>"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_identities_non-\
+trigon\\\\nontrigon_ident_batch1.csv\"\>"], "Output",
  CellChangeTimes->{
   3.6864637719492683`*^9, 3.6865614933192277`*^9, 3.686561593939418*^9, {
    3.686561704281624*^9, 3.6865617497537065`*^9}, {3.6865619206522846`*^9, 
    3.6865619472783337`*^9}, 3.686562618698795*^9, 3.686566634410348*^9, 
    3.686568439863595*^9, 3.6865685714828663`*^9, {3.686568658402088*^9, 
    3.6865687215322294`*^9}, {3.6865687997533903`*^9, 3.6865688044953966`*^9}, 
-   3.686568842844473*^9, 3.686569923132637*^9}]
+   3.686568842844473*^9, 3.686569923132637*^9, 3.687277283100769*^9, 
+   3.6872778456488686`*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -4712,10 +4819,10 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\inputData\\\\decimals\\\\input_\
-identities_non-trigon\\\\nontrigon_ident_batch2.csv\>\"", "]"}], "//", 
-    "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_identities_non-trigon\\\
+\\nontrigon_ident_batch2.csv\>\"", "]"}], "//", "Flatten"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"data", " ", "=", " ", 
@@ -4799,10 +4906,9 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-identities_non-trigon\\\\nontrig_ident2.csv\>\"", ",", "out"}], 
-  "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output_identities_non-\
+trigon\\\\nontrigon_ident_batch2.csv\>\"", ",", "out"}], "]"}]}], "Input",
  CellChangeTimes->{{3.6861329861915655`*^9, 3.6861330475286837`*^9}, {
    3.686389707082057*^9, 3.686389709262063*^9}, {3.686389743197129*^9, 
    3.6863897587541556`*^9}, {3.686391596922539*^9, 3.6863916184625835`*^9}, {
@@ -4822,15 +4928,16 @@ identities_non-trigon\\\\nontrig_ident2.csv\>\"", ",", "out"}],
    3.686564949786793*^9}, {3.6865649822468767`*^9, 3.686565130761194*^9}, {
    3.686565772615077*^9, 3.686565787909111*^9}, 3.6865658312231965`*^9, {
    3.6865659827765193`*^9, 3.686565990299532*^9}, {3.686568856400498*^9, 
-   3.6865689135836053`*^9}}],
+   3.6865689135836053`*^9}, {3.687277367029051*^9, 3.687277380829075*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-identities_non-trigon\\\\nontrig_ident2.csv\"\>"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_identities_non-\
+trigon\\\\nontrigon_ident_batch2.csv\"\>"], "Output",
  CellChangeTimes->{{3.68656512800319*^9, 3.686565131465195*^9}, 
    3.6865657906131153`*^9, 3.6865658316531973`*^9, {3.686565983826521*^9, 
    3.6865659907995324`*^9}, 3.686566634460348*^9, {3.6865689144636064`*^9, 
-   3.6865689436916666`*^9}, 3.686569923172637*^9}]
+   3.6865689436916666`*^9}, 3.686569923172637*^9, 3.6872773812790756`*^9, 
+   3.687277851846878*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -4857,10 +4964,10 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\inputData\\\\decimals\\\\input_\
-identities_non-trigon\\\\nontrigon_ident_batch3.csv\>\"", "]"}], "//", 
-    "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_identities_non-trigon\\\
+\\nontrigon_ident_batch3.csv\>\"", "]"}], "//", "Flatten"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"data", " ", "=", " ", 
@@ -4926,13 +5033,12 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-identities_non-trigon\\\\nontrig_ident3.csv\>\"", ",", "out"}], 
-  "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output_identities_non-\
+trigon\\\\nontrigon_ident_batch3.csv\>\"", ",", "out"}], "]"}]}], "Input",
  CellChangeTimes->{{3.6865652333893547`*^9, 3.6865652605653987`*^9}, {
   3.6865660456288915`*^9, 3.6865661233730583`*^9}, {3.6865689669807186`*^9, 
-  3.686569035325863*^9}}],
+  3.686569035325863*^9}, {3.687277406103121*^9, 3.6872774189551415`*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -4943,7 +5049,8 @@ Cell[BoxData[
 \[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/ovfl\\\", ButtonNote -> \
 \\\"General::ovfl\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6865690435848904`*^9, 3.686569923202637*^9}],
+ CellChangeTimes->{3.6865690435848904`*^9, 3.686569923202637*^9, 
+  3.6872774428241854`*^9, 3.6872778604348955`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -4954,7 +5061,8 @@ Cell[BoxData[
 \[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/ovfl\\\", ButtonNote -> \
 \\\"General::ovfl\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6865690435848904`*^9, 3.686569923202637*^9}],
+ CellChangeTimes->{3.6865690435848904`*^9, 3.686569923202637*^9, 
+  3.6872774428241854`*^9, 3.6872778604448957`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -4965,13 +5073,15 @@ Cell[BoxData[
 \[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/unfl\\\", ButtonNote -> \
 \\\"General::unfl\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6865690435848904`*^9, 3.686569923202637*^9}],
+ CellChangeTimes->{3.6865690435848904`*^9, 3.686569923202637*^9, 
+  3.6872774428241854`*^9, 3.6872778604448957`*^9}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-identities_non-trigon\\\\nontrig_ident3.csv\"\>"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_identities_non-\
+trigon\\\\nontrigon_ident_batch3.csv\"\>"], "Output",
  CellChangeTimes->{3.686565274714426*^9, 3.6865661517381144`*^9, 
-  3.686566634500348*^9, 3.6865690435948906`*^9, 3.686569923212637*^9}]
+  3.686566634500348*^9, 3.6865690435948906`*^9, 3.686569923212637*^9, 
+  3.6872774428341856`*^9, 3.6872778604448957`*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -5003,10 +5113,10 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\inputData\\\\decimals\\\\input_\
-identities_non-trigon\\\\nontrigon_ident_batch4.csv\>\"", "]"}], "//", 
-    "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_identities_non-trigon\\\
+\\nontrigon_ident_batch4.csv\>\"", "]"}], "//", "Flatten"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"data", " ", "=", " ", 
@@ -5049,71 +5159,71 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
      " ", "because", " ", "when", " ", "reading", " ", "from", " ", "the", 
      " ", "hexa", " ", "file", " ", "aditional", " ", "0", " ", "is", " ", 
      "added"}]}], " ", "*)"}]}], "\[IndentingNewLine]", 
- RowBox[{"out", "=", 
-  RowBox[{"Table", "[", 
-   RowBox[{
-    RowBox[{"{", 
-     RowBox[{"\"\<(a*b)^n = (a)^n * (b)^n\>\"", ",", 
-      RowBox[{"data", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
-      ",", 
-      RowBox[{"data", "\[LeftDoubleBracket]", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"Length", "[", "data", "]"}], "/", "3"}], "+", "i"}], 
-       "\[RightDoubleBracket]"}], ",", 
-      RowBox[{"2", "*", 
+ RowBox[{
+  RowBox[{"out", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<(a*b)^n = (a)^n * (b)^n\>\"", ",", 
+       RowBox[{"data", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}],
+        ",", 
        RowBox[{"data", "\[LeftDoubleBracket]", 
         RowBox[{
          RowBox[{
           RowBox[{"Length", "[", "data", "]"}], "/", "3"}], "+", "i"}], 
-        "\[RightDoubleBracket]"}]}], ",", 
-      RowBox[{
-       RowBox[{"(", 
+        "\[RightDoubleBracket]"}], ",", 
+       RowBox[{"2", "*", 
+        RowBox[{"data", "\[LeftDoubleBracket]", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Length", "[", "data", "]"}], "/", "3"}], "+", "i"}], 
+         "\[RightDoubleBracket]"}]}], ",", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+          "data", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], "*", 
+          RowBox[{"data", "\[LeftDoubleBracket]", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Length", "[", "data", "]"}], "/", "3"}], "+", "i"}], 
+           "\[RightDoubleBracket]"}]}], ")"}], "^", 
+        RowBox[{"data", "\[LeftDoubleBracket]", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Length", "[", "data", "]"}], "/", "3"}], "+", "i"}], 
+         "\[RightDoubleBracket]"}]}], ",", 
+       RowBox[{
         RowBox[{
          RowBox[{
-         "data", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], "*", 
+         "data", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], "^", 
          RowBox[{"data", "\[LeftDoubleBracket]", 
           RowBox[{
            RowBox[{
             RowBox[{"Length", "[", "data", "]"}], "/", "3"}], "+", "i"}], 
-          "\[RightDoubleBracket]"}]}], ")"}], "^", 
-       RowBox[{"data", "\[LeftDoubleBracket]", 
+          "\[RightDoubleBracket]"}]}], " ", "*", " ", 
         RowBox[{
-         RowBox[{
-          RowBox[{"Length", "[", "data", "]"}], "/", "3"}], "+", "i"}], 
-        "\[RightDoubleBracket]"}]}], ",", 
-      RowBox[{
+         RowBox[{"data", "\[LeftDoubleBracket]", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Length", "[", "data", "]"}], "/", "3"}], "+", "i"}], 
+          "\[RightDoubleBracket]"}], "^", 
+         RowBox[{"data", "\[LeftDoubleBracket]", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Length", "[", "data", "]"}], "/", "3"}], "+", "i"}], 
+          "\[RightDoubleBracket]"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", 
        RowBox[{
         RowBox[{
-        "data", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], "^", 
-        RowBox[{"data", "\[LeftDoubleBracket]", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"Length", "[", "data", "]"}], "/", "3"}], "+", "i"}], 
-         "\[RightDoubleBracket]"}]}], " ", "*", " ", 
-       RowBox[{
-        RowBox[{"data", "\[LeftDoubleBracket]", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"Length", "[", "data", "]"}], "/", "3"}], "+", "i"}], 
-         "\[RightDoubleBracket]"}], "^", 
-        RowBox[{"data", "\[LeftDoubleBracket]", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"Length", "[", "data", "]"}], "/", "3"}], "+", "i"}], 
-         "\[RightDoubleBracket]"}]}]}]}], "}"}], ",", 
-    RowBox[{"{", 
-     RowBox[{"i", ",", "1", ",", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"Length", "[", "data", "]"}], "/", "2"}], "-", "1"}]}], 
-     "}"}]}], "]"}]}], "\[IndentingNewLine]", 
+         RowBox[{"Length", "[", "data", "]"}], "/", "3"}], "-", "1"}]}], 
+      "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-identities_non-trigon\\\\nontrig_ident4.csv\>\"", ",", "out"}], 
-  "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output_identities_non-\
+trigon\\\\nontrigon_ident_batch4.csv\>\"", ",", "out"}], "]"}]}], "Input",
  CellChangeTimes->{{3.6861329861915655`*^9, 3.6861330475286837`*^9}, {
    3.686389707082057*^9, 3.686389709262063*^9}, {3.686389743197129*^9, 
    3.6863897587541556`*^9}, {3.686391596922539*^9, 3.6863916184625835`*^9}, {
@@ -5138,7 +5248,9 @@ identities_non-trigon\\\\nontrig_ident4.csv\>\"", ",", "out"}],
    3.686562364927453*^9, 3.686562392601514*^9}, {3.6865626568311214`*^9, 
    3.6865626601481266`*^9}, {3.6865691540121355`*^9, 3.686569172953168*^9}, {
    3.6865692237932944`*^9, 3.686569259981366*^9}, {3.6865693017294407`*^9, 
-   3.686569531078872*^9}, {3.68699747324566*^9, 3.6869974762656665`*^9}}],
+   3.686569531078872*^9}, {3.68699747324566*^9, 3.6869974762656665`*^9}, {
+   3.687277506220341*^9, 3.6872775382633963`*^9}, {3.687277574173255*^9, 
+   3.6872777423766837`*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -5150,8 +5262,8 @@ Cell[BoxData[
 ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/indet\\\", ButtonNote -> \
 \\\"Power::indet\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6865695317968736`*^9, 3.686569923242637*^9, 
-  3.686997477752673*^9, 3.6869982303658104`*^9}],
+ CellChangeTimes->{{3.6872777063515797`*^9, 3.687277742980685*^9}, 
+   3.6872778651649065`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -5163,8 +5275,8 @@ Cell[BoxData[
 ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/indet\\\", ButtonNote -> \
 \\\"Power::indet\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6865695317968736`*^9, 3.686569923242637*^9, 
-  3.686997477752673*^9, 3.6869982303758106`*^9}],
+ CellChangeTimes->{{3.6872777063515797`*^9, 3.687277742980685*^9}, 
+   3.6872778651649065`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -5175,8 +5287,8 @@ Cell[BoxData[
 \[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/ovfl\\\", ButtonNote -> \
 \\\"General::ovfl\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6865695317968736`*^9, 3.686569923242637*^9, 
-  3.686997477752673*^9, 3.6869982303758106`*^9}],
+ CellChangeTimes->{{3.6872777063515797`*^9, 3.687277742980685*^9}, 
+   3.6872778651749067`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -5187,8 +5299,8 @@ Cell[BoxData[
 \[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/ovfl\\\", ButtonNote -> \
 \\\"General::ovfl\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6865695317968736`*^9, 3.686569923242637*^9, 
-  3.686997477752673*^9, 3.6869982303758106`*^9}],
+ CellChangeTimes->{{3.6872777063515797`*^9, 3.687277742980685*^9}, 
+   3.6872778651749067`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -5199,8 +5311,8 @@ Cell[BoxData[
 \[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/ovfl\\\", ButtonNote -> \
 \\\"General::ovfl\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6865695317968736`*^9, 3.686569923242637*^9, 
-  3.686997477752673*^9, 3.6869982303758106`*^9}],
+ CellChangeTimes->{{3.6872777063515797`*^9, 3.687277742980685*^9}, 
+   3.6872778651749067`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -5213,125 +5325,18 @@ calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
 ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
 \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6865695317968736`*^9, 3.686569923242637*^9, 
-  3.686997477752673*^9, 3.6869982303758106`*^9}],
+ CellChangeTimes->{{3.6872777063515797`*^9, 3.687277742980685*^9}, 
+   3.6872778651749067`*^9}],
 
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Power", "::", "indet"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Indeterminate expression \[NoBreak]\\!\\(0.`\\^0.`\\)\
-\[NoBreak] encountered. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/indet\\\", ButtonNote -> \
-\\\"Power::indet\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6865695317968736`*^9, 3.686569923242637*^9, 
-  3.686997477752673*^9, 3.6869982303858104`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Power :: \
-indet\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
-calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
-\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6865695317968736`*^9, 3.686569923242637*^9, 
-  3.686997477752673*^9, 3.6869982303858104`*^9}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   RowBox[{"{", 
-    RowBox[{"\<\"(a*b)^n = (a)^n * (b)^n\"\>", ",", "0.`", ",", "5.`15.", ",",
-      "10.`15.", ",", "0.`", ",", "0.`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"(a*b)^n = (a)^n * (b)^n\"\>", ",", "2.`15.", ",", 
-     RowBox[{"-", "2.`15."}], ",", 
-     RowBox[{"-", "4.`15."}], ",", 
-     RowBox[{"0.0625`15.", "+", 
-      RowBox[{"3.67341984631965`15.*^-40", " ", "\[ImaginaryI]"}]}], ",", 
-     RowBox[{"0.0625`15.", "+", 
-      RowBox[{"3.67341984631965`15.*^-40", " ", "\[ImaginaryI]"}]}]}], "}"}], 
-   ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"(a*b)^n = (a)^n * (b)^n\"\>", ",", "2.`15.", ",", "0.`", ",",
-      "0.`", ",", "Indeterminate", ",", "Indeterminate"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"(a*b)^n = (a)^n * (b)^n\"\>", ",", 
-     RowBox[{"-", "2.`15."}], ",", "5.`15.", ",", "10.`15.", ",", 
-     RowBox[{
-      RowBox[{"-", "100000.`15."}], "+", 
-      RowBox[{"1.46936793852786`15.*^-33", " ", "\[ImaginaryI]"}]}], ",", 
-     RowBox[{
-      RowBox[{"-", "100000.`15."}], "+", 
-      RowBox[{"1.46936793852786`15.*^-33", " ", "\[ImaginaryI]"}]}]}], "}"}], 
-   ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"(a*b)^n = (a)^n * (b)^n\"\>", ",", 
-     RowBox[{"-", "2.`15."}], ",", "1.`15.*^22", ",", "2.`15.*^22", ",", 
-     RowBox[{"Overflow", "[", "]"}], ",", 
-     RowBox[{"Overflow", "[", "]"}]}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"(a*b)^n = (a)^n * (b)^n\"\>", ",", "8.`15.", ",", "8.`15.", 
-     ",", "16.`15.", ",", "2.81474976710656`15.*^14", ",", 
-     "2.81474976710656`15.*^14"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"(a*b)^n = (a)^n * (b)^n\"\>", ",", 
-     RowBox[{"-", "1.`15.*^-22"}], ",", 
-     RowBox[{"-", "1.`15.*^-23"}], ",", 
-     RowBox[{"-", "2.`15.*^-23"}], ",", "1.`15.", ",", 
-     RowBox[{"1.`15.", "-", 
-      RowBox[{"6.28318530717959`15.*^-23", " ", "\[ImaginaryI]"}]}]}], "}"}], 
-   ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"(a*b)^n = (a)^n * (b)^n\"\>", ",", "1.`15.*^22", ",", 
-     "3.`15.", ",", "6.`15.", ",", "2.7`15.*^67", ",", "2.7`15.*^67"}], "}"}],
-    ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"(a*b)^n = (a)^n * (b)^n\"\>", ",", 
-     "2.2250738585072`15.*^-308", ",", "3.`15.", ",", "6.`15.", ",", 
-     "2.97438415165702`15.*^-922", ",", "2.97438415165702`15.*^-922"}], "}"}],
-    ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"(a*b)^n = (a)^n * (b)^n\"\>", ",", 
-     "1.79769313486232`15.*^308", ",", "3.`15.", ",", "6.`15.", ",", 
-     "1.56859361874989`15.*^926", ",", "1.56859361874989`15.*^926"}], "}"}], 
-   ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"(a*b)^n = (a)^n * (b)^n\"\>", ",", "0.`", ",", "0.`", ",", 
-     "0.`", ",", "Indeterminate", ",", "Indeterminate"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"(a*b)^n = (a)^n * (b)^n\"\>", ",", "5.`15.", ",", "1.`15.", 
-     ",", "2.`15.", ",", "5.`15.", ",", "5.`15."}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"(a*b)^n = (a)^n * (b)^n\"\>", ",", 
-     RowBox[{"-", "2.`15."}], ",", "0.5`15.", ",", "1.`15.", ",", 
-     RowBox[{"1.`15.", " ", "\[ImaginaryI]"}], ",", 
-     RowBox[{"1.`15.", " ", "\[ImaginaryI]"}]}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"(a*b)^n = (a)^n * (b)^n\"\>", ",", "0.`", ",", "4.`15.", ",",
-      "8.`15.", ",", "0.`", ",", "0.`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"(a*b)^n = (a)^n * (b)^n\"\>", ",", "5.`15.", ",", "100.`15.",
-      ",", "200.`15.", ",", "7.88860905221012`15.*^269", ",", 
-     "7.88860905221012`15.*^269"}], "}"}]}], "}"}]], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_identities_non-\
+trigon\\\\nontrigon_ident_batch4.csv\"\>"], "Output",
  CellChangeTimes->{{3.6865623116103334`*^9, 3.6865623173593426`*^9}, {
    3.6865623654004545`*^9, 3.686562408549542*^9}, 3.6865626614601297`*^9, 
    3.6865666345503483`*^9, 3.686569531826874*^9, 3.686569923252637*^9, 
-   3.6869974778986745`*^9, 3.6869982303858104`*^9}],
-
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-identities_non-trigon\\\\nontrig_ident4.csv\"\>"], "Output",
- CellChangeTimes->{{3.6865623116103334`*^9, 3.6865623173593426`*^9}, {
-   3.6865623654004545`*^9, 3.686562408549542*^9}, 3.6865626614601297`*^9, 
-   3.6865666345503483`*^9, 3.686569531826874*^9, 3.686569923252637*^9, 
-   3.6869974778986745`*^9, 3.68699823039581*^9}]
+   3.6869974778986745`*^9, 3.6869982303858104`*^9, 3.6872775388933973`*^9, {
+   3.687277574786256*^9, 3.6872775815372686`*^9}, {3.6872776230864367`*^9, 
+   3.687277742990686*^9}, 3.6872778651749067`*^9}]
 }, Open  ]]
 }, Closed]],
 
@@ -5359,10 +5364,10 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\inputData\\\\decimals\\\\input_\
-identities_non-trigon\\\\nontrigon_ident_batch5.csv\>\"", "]"}], "//", 
-    "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
+     "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\inputData\\\\decimals\\\\input_identities_non-trigon\\\
+\\nontrigon_ident_batch5.csv\>\"", "]"}], "//", "Flatten"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"data", " ", "=", " ", 
@@ -5470,10 +5475,9 @@ IND000000000000000000000000000000000000000000000000000000000000000000000000000\
       "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-identities_non-trigon\\\\nontrig_ident5.csv\>\"", ",", "out"}], 
-  "]"}]}], "Input",
+  "\"\<C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\\\\\
+matlib4space-master\\\\outputData\\\\Mathematica\\\\output_identities_non-\
+trigon\\\\nontrigon_ident_batch5.csv\>\"", ",", "out"}], "]"}]}], "Input",
  CellChangeTimes->{{3.6861329861915655`*^9, 3.6861330475286837`*^9}, {
    3.686389707082057*^9, 3.686389709262063*^9}, {3.686389743197129*^9, 
    3.6863897587541556`*^9}, {3.686391596922539*^9, 3.6863916184625835`*^9}, {
@@ -5499,7 +5503,8 @@ identities_non-trigon\\\\nontrig_ident5.csv\>\"", ",", "out"}],
    3.686565689963924*^9}, {3.6865663883887663`*^9, 3.6865663990397882`*^9}, {
    3.6865664435888863`*^9, 3.6865664589739213`*^9}, {3.6865665289450617`*^9, 
    3.686566541199088*^9}, {3.6865696600111246`*^9, 3.6865697163612337`*^9}, {
-   3.6865697525613055`*^9, 3.6865698633235087`*^9}}],
+   3.6865697525613055`*^9, 3.6865698633235087`*^9}, {3.6872777550847044`*^9, 
+   3.6872777691277294`*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -5511,7 +5516,8 @@ encountered. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
 ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/infy\\\", ButtonNote -> \
 \\\"Power::infy\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6865698641735115`*^9, 3.6865699232826376`*^9}],
+ CellChangeTimes->{3.6865698641735115`*^9, 3.6865699232826376`*^9, 
+  3.6872777697107315`*^9, 3.687277804379799*^9, 3.687277867124909*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -5523,19 +5529,21 @@ ComplexInfinity\\)\[NoBreak] encountered. \\!\\(\\*ButtonBox[\\\"\
 \[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/indet\\\", ButtonNote -> \
 \\\"Infinity::indet\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6865698641735115`*^9, 3.6865699232826376`*^9}],
+ CellChangeTimes->{3.6865698641735115`*^9, 3.6865699232826376`*^9, 
+  3.6872777697107315`*^9, 3.687277804379799*^9, 3.687277867124909*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
    RowBox[{"Power", "::", "infy"}], "MessageName"], 
   RowBox[{
-  ":", " "}], "\<\"Infinite expression \
-\[NoBreak]\\!\\(1\\/0.`\\^5.`80.22184874961637\\)\[NoBreak] encountered. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/infy\\\", \
-ButtonNote -> \\\"Power::infy\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6865698641735115`*^9, 3.6865699232826376`*^9}],
+  ":", " "}], "\<\"Infinite expression \[NoBreak]\\!\\(1\\/0.`\\^5.`15.\\)\
+\[NoBreak] encountered. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/infy\\\", ButtonNote -> \
+\\\"Power::infy\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6865698641735115`*^9, 3.6865699232826376`*^9, 
+  3.6872777697107315`*^9, 3.687277804379799*^9, 3.687277867124909*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -5547,7 +5555,8 @@ Cell[BoxData[
 ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/indet\\\", ButtonNote -> \
 \\\"Power::indet\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6865698641735115`*^9, 3.6865699232826376`*^9}],
+ CellChangeTimes->{3.6865698641735115`*^9, 3.6865699232826376`*^9, 
+  3.6872777697107315`*^9, 3.687277804379799*^9, 3.6872778671349087`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -5559,7 +5568,8 @@ Cell[BoxData[
 ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/indet\\\", ButtonNote -> \
 \\\"Power::indet\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6865698641735115`*^9, 3.6865699232926373`*^9}],
+ CellChangeTimes->{3.6865698641735115`*^9, 3.6865699232826376`*^9, 
+  3.6872777697107315`*^9, 3.687277804379799*^9, 3.6872778671349087`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -5571,7 +5581,8 @@ Cell[BoxData[
 ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/indet\\\", ButtonNote -> \
 \\\"Power::indet\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6865698641735115`*^9, 3.6865699232926373`*^9}],
+ CellChangeTimes->{3.6865698641735115`*^9, 3.6865699232826376`*^9, 
+  3.6872777697107315`*^9, 3.687277804379799*^9, 3.6872778671349087`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -5584,7 +5595,8 @@ calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
 ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
 \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6865698641735115`*^9, 3.6865699232926373`*^9}],
+ CellChangeTimes->{3.6865698641735115`*^9, 3.6865699232826376`*^9, 
+  3.6872777697107315`*^9, 3.687277804379799*^9, 3.6872778671349087`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -5596,7 +5608,8 @@ encountered. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
 ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/infy\\\", ButtonNote -> \
 \\\"Power::infy\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6865698641735115`*^9, 3.6865699232926373`*^9}],
+ CellChangeTimes->{3.6865698641735115`*^9, 3.6865699232826376`*^9, 
+  3.6872777697107315`*^9, 3.687277804379799*^9, 3.6872778671349087`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -5609,7 +5622,8 @@ calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
 ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
 \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6865698641735115`*^9, 3.6865699232926373`*^9}],
+ CellChangeTimes->{3.6865698641735115`*^9, 3.6865699232826376`*^9, 
+  3.6872777697107315`*^9, 3.687277804379799*^9, 3.6872778671349087`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -5621,23 +5635,25 @@ ComplexInfinity\\)\[NoBreak] encountered. \\!\\(\\*ButtonBox[\\\"\
 \[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/indet\\\", ButtonNote -> \
 \\\"Infinity::indet\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6865698641735115`*^9, 3.6865699232926373`*^9}],
+ CellChangeTimes->{3.6865698641735115`*^9, 3.6865699232826376`*^9, 
+  3.6872777697107315`*^9, 3.687277804379799*^9, 3.687277867144909*^9}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Dropbox\\\\Work\\\\Projects\\\\\
-Mathlib4Space\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_\
-identities_non-trigon\\\\nontrig_ident5.csv\"\>"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\Madalina\\\\Downloads\\\\matlib4space-master\
+\\\\matlib4space-master\\\\outputData\\\\Mathematica\\\\output_identities_non-\
+trigon\\\\nontrigon_ident_batch5.csv\"\>"], "Output",
  CellChangeTimes->{3.686463772239269*^9, 3.6865665449510965`*^9, 
-  3.686566634600348*^9, 3.686569864203511*^9, 3.6865699232926373`*^9}]
+  3.686566634600348*^9, 3.686569864203511*^9, 3.6865699232926373`*^9, 
+  3.6872777697207317`*^9, 3.6872778043997993`*^9, 3.687277867144909*^9}]
 }, Open  ]]
 }, Closed]]
 }, Closed]]
 },
-WindowSize->{1902, 910},
+WindowSize->{1893, 910},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 ShowSelection->True,
 CellLabelAutoDelete->True,
 Magnification:>FEPrivate`If[
-  FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.5, 1.5 Inherited],
+  FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.25, 1.25 Inherited],
 FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (November 7, 2010)",
 StyleDefinitions->"Default.nb"
 ]
@@ -5652,341 +5668,336 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 687, 13, 71, "Input"],
+Cell[557, 20, 687, 13, 58, "Input"],
 Cell[CellGroupData[{
-Cell[1269, 37, 110, 1, 105, "Section"],
+Cell[1269, 37, 110, 1, 88, "Section"],
 Cell[CellGroupData[{
-Cell[1404, 42, 657, 8, 54, "Subsection"],
+Cell[1404, 42, 657, 8, 46, "Subsection"],
 Cell[CellGroupData[{
-Cell[2086, 54, 4295, 115, 10894, "Input"],
-Cell[6384, 171, 284, 4, 1188, "Output"],
-Cell[6671, 177, 284, 4, 1188, "Output"],
-Cell[6958, 183, 284, 4, 1188, "Output"]
+Cell[2086, 54, 4227, 111, 322, "Input"],
+Cell[6316, 167, 795, 16, 128, "Output"],
+Cell[7114, 185, 411, 6, 35, "Output"],
+Cell[7528, 193, 411, 6, 35, "Output"],
+Cell[7942, 201, 411, 6, 35, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[7291, 193, 681, 9, 40, "Subsection"],
+Cell[8402, 213, 732, 10, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[7997, 206, 4667, 118, 10894, "Input"],
-Cell[12667, 326, 284, 4, 1156, "Output"],
-Cell[12954, 332, 282, 4, 1156, "Output"],
-Cell[13239, 338, 284, 4, 1156, "Output"]
+Cell[9159, 227, 4215, 115, 402, "Input"],
+Cell[13377, 344, 413, 6, 43, "Output"],
+Cell[13793, 352, 415, 6, 43, "Output"],
+Cell[14211, 360, 413, 6, 43, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[13572, 348, 711, 9, 40, "Subsection"],
+Cell[14673, 372, 711, 9, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[14308, 361, 5238, 122, 8586, "Input"],
-Cell[19549, 485, 286, 4, 1156, "Output"],
-Cell[19838, 491, 288, 4, 1156, "Output"]
+Cell[15409, 385, 5316, 123, 256, "Input"],
+Cell[20728, 510, 363, 5, 35, "Output"],
+Cell[21094, 517, 363, 5, 35, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[20175, 501, 732, 9, 40, "Subsection"],
+Cell[21506, 528, 783, 10, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[20932, 514, 5132, 120, 8586, "Input"],
-Cell[26067, 636, 286, 4, 1156, "Output"],
-Cell[26356, 642, 286, 4, 1156, "Output"]
+Cell[22314, 542, 5102, 119, 256, "Input"],
+Cell[27419, 663, 341, 5, 35, "Output"],
+Cell[27763, 670, 341, 5, 35, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[26691, 652, 793, 10, 40, "Subsection"],
+Cell[28153, 681, 793, 10, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[27509, 666, 4087, 90, 6286, "Input"],
-Cell[31599, 758, 274, 3, 711, "Output"]
+Cell[28971, 695, 4136, 91, 190, "Input"],
+Cell[33110, 788, 328, 5, 35, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[31922, 767, 791, 10, 40, "Subsection"],
+Cell[33487, 799, 842, 11, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[32738, 781, 4251, 93, 6286, "Input"],
-Cell[36992, 876, 274, 3, 711, "Output"]
+Cell[34354, 814, 4297, 93, 190, "Input"],
+Cell[38654, 909, 329, 5, 35, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[37315, 885, 845, 11, 40, "Subsection"],
+Cell[39032, 920, 845, 11, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[38185, 900, 5506, 112, 341, "Input"],
-Cell[43694, 1014, 504, 10, 35, "Message"],
-Cell[44201, 1026, 251, 3, 42, "Output"]
+Cell[39902, 935, 5714, 116, 256, "Input"],
+Cell[45619, 1053, 580, 11, 70, "Message"],
+Cell[46202, 1066, 430, 6, 70, "Output"]
 }, Open  ]],
-Cell[44467, 1032, 408, 11, 43, "Input"]
+Cell[46647, 1075, 408, 11, 35, "Input"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[44912, 1048, 1012, 13, 40, "Subsection"],
+Cell[47092, 1091, 1012, 13, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[45949, 1065, 5914, 122, 314, "Input"],
-Cell[51866, 1189, 502, 10, 35, "Message"],
-Cell[52371, 1201, 500, 10, 35, "Message"],
-Cell[52874, 1213, 380, 6, 42, "Output"]
+Cell[48129, 1108, 6097, 125, 234, "Input"],
+Cell[54229, 1235, 528, 11, 70, "Message"],
+Cell[54760, 1248, 554, 8, 70, "Output"]
 }, Open  ]],
-Cell[53269, 1222, 408, 11, 43, "Input"]
+Cell[55329, 1259, 408, 11, 35, "Input"]
 }, Closed]]
-}, Open  ]],
+}, Closed]],
 Cell[CellGroupData[{
-Cell[53726, 1239, 163, 2, 105, "Section"],
-Cell[53892, 1243, 886, 21, 71, "Input"],
+Cell[55786, 1276, 163, 2, 50, "Section"],
+Cell[55952, 1280, 886, 21, 58, "Input"],
 Cell[CellGroupData[{
-Cell[54803, 1268, 722, 9, 54, "Subsection"],
+Cell[56863, 1305, 722, 9, 46, "Subsection"],
 Cell[CellGroupData[{
-Cell[55550, 1281, 3299, 73, 6286, "Input"],
-Cell[58852, 1356, 458, 6, 1188, "Output"]
+Cell[57610, 1318, 3420, 75, 190, "Input"],
+Cell[61033, 1395, 613, 9, 70, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[59359, 1368, 718, 9, 40, "Subsection"],
+Cell[61695, 1410, 769, 10, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[60102, 1381, 2552, 66, 6286, "Input"],
-Cell[62657, 1449, 456, 6, 1188, "Output"]
+Cell[62489, 1424, 2571, 67, 190, "Input"],
+Cell[65063, 1493, 559, 8, 35, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[63162, 1461, 748, 10, 40, "Subsection"],
+Cell[65671, 1507, 799, 11, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[63935, 1475, 2569, 67, 6286, "Input"],
-Cell[66507, 1544, 476, 6, 1188, "Output"]
+Cell[66495, 1522, 2583, 67, 190, "Input"],
+Cell[69081, 1591, 584, 8, 35, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[67032, 1556, 1039, 19, 40, "Subsection"],
+Cell[69714, 1605, 1039, 19, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[68096, 1579, 2258, 60, 6286, "Input"],
-Cell[70357, 1641, 377, 4, 1188, "Output"]
+Cell[70778, 1628, 2309, 60, 190, "Input"],
+Cell[73090, 1690, 481, 6, 70, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[70783, 1651, 1236, 21, 40, "Subsection"],
+Cell[73620, 1702, 1236, 21, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[72044, 1676, 4753, 121, 10431, "Input"],
-Cell[76800, 1799, 419, 6, 1188, "Output"],
-Cell[77222, 1807, 417, 6, 1188, "Output"]
+Cell[74881, 1727, 4880, 124, 300, "Input"],
+Cell[79764, 1853, 768, 10, 70, "Output"],
+Cell[80535, 1865, 766, 10, 70, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[77688, 1819, 1450, 29, 40, "Subsection"],
+Cell[81350, 1881, 1450, 29, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[79163, 1852, 3316, 81, 314, "Input"],
-Cell[82482, 1935, 495, 10, 35, "Message"],
-Cell[82980, 1947, 529, 11, 35, "Message"],
-Cell[83512, 1960, 501, 10, 35, "Message"],
-Cell[84016, 1972, 554, 11, 35, "Message"],
-Cell[84573, 1985, 493, 10, 35, "Message"],
-Cell[85069, 1997, 280, 3, 42, "Output"]
+Cell[82825, 1914, 3672, 88, 234, "Input"],
+Cell[86500, 2004, 631, 12, 70, "Message"],
+Cell[87134, 2018, 644, 12, 70, "Message"],
+Cell[87781, 2032, 623, 12, 70, "Message"],
+Cell[88407, 2046, 684, 13, 70, "Message"],
+Cell[89094, 2061, 621, 12, 70, "Message"],
+Cell[89718, 2075, 432, 6, 70, "Output"]
 }, Open  ]]
-}, Open  ]],
-Cell[85376, 2004, 1247, 21, 54, "Subsection"],
+}, Closed]],
+Cell[90177, 2085, 1247, 21, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[86648, 2029, 1203, 16, 40, "Subsection"],
+Cell[91449, 2110, 1203, 16, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[87876, 2049, 2655, 65, 6286, "Input"],
-Cell[90534, 2116, 607, 7, 1188, "Output"]
+Cell[92677, 2130, 2698, 65, 190, "Input"],
+Cell[95378, 2197, 717, 9, 70, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[91190, 2129, 1196, 16, 40, "Subsection"],
+Cell[96144, 2212, 1247, 17, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[92411, 2149, 2707, 66, 6286, "Input"],
-Cell[95121, 2217, 633, 8, 1188, "Output"]
+Cell[97416, 2233, 2700, 65, 190, "Input"],
+Cell[100119, 2300, 633, 8, 35, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[95803, 2231, 1216, 16, 40, "Subsection"],
+Cell[100801, 2314, 1267, 17, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[97044, 2251, 2755, 66, 6286, "Input"],
-Cell[99802, 2319, 657, 8, 1188, "Output"]
+Cell[102093, 2335, 2754, 66, 190, "Input"],
+Cell[104850, 2403, 663, 9, 35, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[100508, 2333, 1460, 24, 41, "Subsection"],
+Cell[105562, 2418, 1460, 24, 36, "Subsection"],
 Cell[CellGroupData[{
-Cell[101993, 2361, 3359, 80, 706, "Input"],
-Cell[105355, 2443, 1032, 19, 321, "Output"],
-Cell[106390, 2464, 831, 11, 94, "Output"]
+Cell[107047, 2446, 3706, 87, 234, "Input"],
+Cell[110756, 2535, 999, 13, 70, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[107270, 2481, 1462, 24, 41, "Subsection"],
+Cell[111804, 2554, 1578, 27, 36, "Subsection"],
 Cell[CellGroupData[{
-Cell[108757, 2509, 3457, 82, 706, "Input"],
-Cell[112217, 2593, 881, 11, 94, "Output"]
+Cell[113407, 2585, 3680, 86, 234, "Input"],
+Cell[117090, 2673, 734, 10, 35, "Output"],
+Cell[117827, 2685, 895, 12, 35, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[113147, 2610, 1460, 24, 41, "Subsection"],
+Cell[118771, 2703, 1626, 27, 36, "Subsection"],
 Cell[CellGroupData[{
-Cell[114632, 2638, 3509, 83, 706, "Input"],
-Cell[118144, 2723, 247, 3, 94, "Output"]
+Cell[120422, 2734, 3719, 86, 234, "Input"],
+Cell[124144, 2822, 288, 4, 35, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[118440, 2732, 1508, 26, 40, "Subsection"],
+Cell[124481, 2832, 1508, 26, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[119973, 2762, 2903, 68, 5814, "Input"],
-Cell[122879, 2832, 677, 8, 1188, "Output"]
+Cell[126014, 2862, 3052, 70, 168, "Input"],
+Cell[129069, 2934, 833, 11, 35, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[123605, 2846, 1353, 18, 40, "Subsection"],
+Cell[129951, 2951, 1353, 18, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[124983, 2868, 3817, 88, 645, "Input"],
-Cell[128803, 2958, 563, 11, 82, "Message"],
-Cell[129369, 2971, 548, 11, 82, "Message"],
-Cell[129920, 2984, 534, 11, 82, "Message"],
-Cell[130457, 2997, 1077, 14, 94, "Output"]
+Cell[131329, 2973, 4058, 93, 234, "Input"],
+Cell[135390, 3068, 632, 12, 70, "Message"],
+Cell[136025, 3082, 1163, 15, 70, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[131583, 3017, 1416, 19, 40, "Subsection"],
+Cell[137237, 3103, 1416, 19, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[133024, 3040, 3072, 69, 5814, "Input"],
-Cell[136099, 3111, 867, 12, 1188, "Output"]
+Cell[138678, 3126, 3136, 69, 168, "Input"],
+Cell[141817, 3197, 890, 12, 70, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[137015, 3129, 1516, 20, 40, "Subsection"],
+Cell[142756, 3215, 1516, 20, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[138556, 3153, 3221, 70, 390, "Input"],
-Cell[141780, 3225, 1053, 14, 63, "Output"]
+Cell[144297, 3239, 3363, 72, 168, "Input"],
+Cell[147663, 3313, 1086, 14, 70, "Output"]
 }, Open  ]]
 }, Closed]],
-Cell[142860, 3243, 1665, 27, 40, "Subsection"],
+Cell[148776, 3331, 1665, 27, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[144550, 3274, 1572, 21, 40, "Subsection"],
+Cell[150466, 3362, 1572, 21, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[146147, 3299, 3150, 69, 390, "Input"],
-Cell[149300, 3370, 853, 11, 63, "Output"]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[150202, 3387, 1204, 16, 40, "Subsection"],
-Cell[CellGroupData[{
-Cell[151431, 3407, 2721, 64, 5814, "Input"],
-Cell[154155, 3473, 656, 8, 1188, "Output"]
+Cell[152063, 3387, 3268, 71, 168, "Input"],
+Cell[155334, 3460, 892, 12, 70, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[154860, 3487, 1228, 16, 40, "Subsection"],
+Cell[156275, 3478, 1204, 16, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[156113, 3507, 2719, 64, 5814, "Input"],
-Cell[158835, 3573, 656, 8, 1188, "Output"]
+Cell[157504, 3498, 2800, 65, 168, "Input"],
+Cell[160307, 3565, 694, 9, 70, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[159540, 3587, 1252, 17, 40, "Subsection"],
+Cell[161050, 3580, 1279, 17, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[160817, 3608, 2771, 65, 5814, "Input"],
-Cell[163591, 3675, 682, 8, 1188, "Output"]
-}, Open  ]]
-}, Closed]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[164334, 3690, 159, 2, 105, "Section"],
-Cell[CellGroupData[{
-Cell[164518, 3696, 647, 8, 121, "Subsection"],
-Cell[CellGroupData[{
-Cell[165190, 3708, 3813, 81, 1723, "Input"],
-Cell[169006, 3791, 452, 6, 352, "Output"]
+Cell[162354, 3601, 2692, 63, 168, "Input"],
+Cell[165049, 3666, 656, 8, 35, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[169507, 3803, 797, 12, 90, "Subsection"],
+Cell[165754, 3680, 1303, 18, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[170329, 3819, 5656, 126, 2134, "Input"],
-Cell[175988, 3947, 400, 5, 352, "Output"]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[176437, 3958, 819, 12, 90, "Subsection"],
-Cell[CellGroupData[{
-Cell[177281, 3974, 4405, 110, 2134, "Input"],
-Cell[181689, 4086, 300, 4, 352, "Output"]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[182038, 4096, 722, 9, 90, "Subsection"],
-Cell[CellGroupData[{
-Cell[182785, 4109, 4061, 86, 1723, "Input"],
-Cell[186849, 4197, 383, 5, 352, "Output"]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[187281, 4208, 908, 13, 90, "Subsection"],
-Cell[CellGroupData[{
-Cell[188214, 4225, 6226, 135, 949, "Input"],
-Cell[194443, 4362, 300, 4, 94, "Output"]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[194792, 4372, 797, 10, 90, "Subsection"],
-Cell[CellGroupData[{
-Cell[195614, 4386, 2420, 63, 766, "Input"],
-Cell[198037, 4451, 327, 4, 94, "Output"]
+Cell[167082, 3702, 2743, 63, 168, "Input"],
+Cell[169828, 3767, 682, 8, 35, "Output"]
 }, Open  ]]
 }, Closed]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[198425, 4462, 214, 3, 58, "Section"],
+Cell[170571, 3782, 159, 2, 50, "Section"],
 Cell[CellGroupData[{
-Cell[198664, 4469, 676, 9, 81, "Subsection"],
+Cell[170755, 3788, 647, 8, 46, "Subsection"],
 Cell[CellGroupData[{
-Cell[199365, 4482, 5772, 123, 1423, "Input"],
-Cell[205140, 4607, 583, 12, 235, "Message"],
-Cell[205726, 4621, 584, 12, 235, "Message"],
-Cell[206313, 4635, 583, 12, 235, "Message"],
-Cell[206899, 4649, 583, 12, 235, "Message"],
-Cell[207485, 4663, 698, 14, 235, "Message"],
-Cell[208186, 4679, 659, 9, 235, "Output"]
+Cell[171427, 3800, 3944, 84, 168, "Input"],
+Cell[175374, 3886, 542, 8, 35, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[208894, 4694, 811, 10, 60, "Subsection"],
+Cell[175965, 3900, 797, 12, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[209730, 4708, 5269, 116, 633, "Input"],
-Cell[215002, 4826, 483, 6, 63, "Output"]
+Cell[176787, 3916, 5782, 128, 234, "Input"],
+Cell[182572, 4046, 462, 6, 35, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[215534, 4838, 813, 11, 60, "Subsection"],
+Cell[183083, 4058, 819, 12, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[216372, 4853, 3268, 81, 592, "Input"],
-Cell[219643, 4936, 437, 9, 52, "Message"],
-Cell[220083, 4947, 437, 9, 52, "Message"],
-Cell[220523, 4958, 438, 9, 52, "Message"],
-Cell[220964, 4969, 353, 4, 63, "Output"]
+Cell[183927, 4074, 4430, 111, 234, "Input"],
+Cell[188360, 4187, 336, 4, 35, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[221366, 4979, 741, 10, 60, "Subsection"],
-Cell[222110, 4991, 196, 4, 64, "Input"],
+Cell[188745, 4197, 722, 9, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[222331, 4999, 6458, 141, 673, "Input"],
-Cell[228792, 5142, 530, 11, 55, "Message"],
-Cell[229325, 5155, 530, 11, 55, "Message"],
-Cell[229858, 5168, 486, 10, 52, "Message"],
-Cell[230347, 5180, 486, 10, 52, "Message"],
-Cell[230836, 5192, 486, 10, 52, "Message"],
-Cell[231325, 5204, 603, 12, 52, "Message"],
-Cell[231931, 5218, 530, 11, 55, "Message"],
-Cell[232464, 5231, 602, 12, 52, "Message"],
-Cell[233069, 5245, 3778, 80, 670, "Output"],
-Cell[236850, 5327, 483, 6, 63, "Output"]
+Cell[189492, 4210, 4085, 86, 168, "Input"],
+Cell[193580, 4298, 383, 5, 35, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[237382, 5339, 888, 12, 60, "Subsection"],
+Cell[194012, 4309, 908, 13, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[238295, 5355, 6690, 146, 1513, "Input"],
-Cell[244988, 5503, 473, 10, 235, "Message"],
-Cell[245464, 5515, 503, 10, 235, "Message"],
-Cell[245970, 5527, 496, 10, 235, "Message"],
-Cell[246469, 5539, 483, 10, 235, "Message"],
-Cell[246955, 5551, 483, 10, 235, "Message"],
-Cell[247441, 5563, 483, 10, 235, "Message"],
-Cell[247927, 5575, 555, 11, 235, "Message"],
-Cell[248485, 5588, 473, 10, 235, "Message"],
-Cell[248961, 5600, 554, 11, 235, "Message"],
-Cell[249518, 5613, 503, 10, 235, "Message"],
-Cell[250024, 5625, 353, 4, 235, "Output"]
+Cell[194945, 4326, 6246, 135, 234, "Input"],
+Cell[201194, 4463, 312, 4, 35, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[201555, 4473, 797, 10, 35, "Subsection"],
+Cell[CellGroupData[{
+Cell[202377, 4487, 2447, 64, 168, "Input"],
+Cell[204827, 4553, 337, 4, 35, "Output"]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[205225, 4564, 214, 3, 50, "Section"],
+Cell[CellGroupData[{
+Cell[205464, 4571, 676, 9, 46, "Subsection"],
+Cell[CellGroupData[{
+Cell[206165, 4584, 5797, 122, 234, "Input"],
+Cell[211965, 4708, 633, 13, 29, "Message"],
+Cell[212601, 4723, 636, 13, 29, "Message"],
+Cell[213240, 4738, 635, 13, 29, "Message"],
+Cell[213878, 4753, 635, 13, 29, "Message"],
+Cell[214516, 4768, 752, 15, 29, "Message"],
+Cell[215271, 4785, 705, 10, 35, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[216025, 4801, 811, 10, 35, "Subsection"],
+Cell[CellGroupData[{
+Cell[216861, 4815, 5294, 115, 234, "Input"],
+Cell[222158, 4932, 529, 7, 35, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[222736, 4945, 813, 11, 35, "Subsection"],
+Cell[CellGroupData[{
+Cell[223574, 4960, 3295, 80, 234, "Input"],
+Cell[226872, 5042, 488, 10, 29, "Message"],
+Cell[227363, 5054, 488, 10, 29, "Message"],
+Cell[227854, 5066, 489, 10, 29, "Message"],
+Cell[228346, 5078, 400, 5, 35, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[228795, 5089, 741, 10, 35, "Subsection"],
+Cell[229539, 5101, 196, 4, 35, "Input"],
+Cell[CellGroupData[{
+Cell[229760, 5109, 6617, 143, 256, "Input"],
+Cell[236380, 5254, 511, 11, 29, "Message"],
+Cell[236894, 5267, 511, 11, 29, "Message"],
+Cell[237408, 5280, 467, 10, 29, "Message"],
+Cell[237878, 5292, 467, 10, 29, "Message"],
+Cell[238348, 5304, 467, 10, 29, "Message"],
+Cell[238818, 5316, 584, 12, 29, "Message"],
+Cell[239405, 5330, 634, 8, 35, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[240088, 5344, 888, 12, 35, "Subsection"],
+Cell[CellGroupData[{
+Cell[241001, 5360, 6723, 146, 256, "Input"],
+Cell[247727, 5508, 544, 11, 47, "Message"],
+Cell[248274, 5521, 574, 11, 29, "Message"],
+Cell[248851, 5534, 553, 11, 48, "Message"],
+Cell[249407, 5547, 556, 11, 29, "Message"],
+Cell[249966, 5560, 556, 11, 29, "Message"],
+Cell[250525, 5573, 556, 11, 29, "Message"],
+Cell[251084, 5586, 628, 12, 29, "Message"],
+Cell[251715, 5600, 546, 11, 47, "Message"],
+Cell[252264, 5613, 627, 12, 29, "Message"],
+Cell[252894, 5627, 574, 11, 29, "Message"],
+Cell[253471, 5640, 422, 5, 35, "Output"]
 }, Open  ]]
 }, Closed]]
 }, Closed]]
