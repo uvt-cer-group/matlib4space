@@ -1,8 +1,8 @@
-3.,Infinity,Infinity
--Infinity,0.,ComplexInfinity
-Infinity,0.,0
-Indeterminate,12.,Indeterminate
+Infinity,3.,Infinity
+0.,-Infinity,ComplexInfinity
+0.,Infinity,0
 12.,Indeterminate,Indeterminate
+Indeterminate,12.,Indeterminate
 0.,0.,Indeterminate
-0.,8.,1.
-0.,11.,1.
+8.,0.,1.
+11.,0.,1.
