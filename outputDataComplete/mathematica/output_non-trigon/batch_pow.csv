@@ -1,0 +1,8 @@
+Infinity,3.,Infinity
+0.,-Infinity,ComplexInfinity
+0.,Infinity,0
+12.,Indeterminate,Indeterminate
+Indeterminate,12.,Indeterminate
+0.,0.,Indeterminate
+8.,0.,1.
+11.,0.,1.
